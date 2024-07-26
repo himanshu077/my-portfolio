@@ -184,6 +184,12 @@
       "name": "Full Stack Development",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
       "enabled": true
+    },
+    {
+      "id": "6",
+      "name": "Backend Development",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
     }
   ],
   "projects": [
@@ -336,18 +342,18 @@
   ],
   "activeProjects": [
     {
+      "name": "Bidmii",
+      "order": 0,
+      "enabled": true,
+      "type": "json",
+      "category": ["Web Development"]
+    },
+    {
       "name": "ai-chat",
       "order": 1,
       "enabled": true,
       "type": "github",
       "category": ["Full Stack Development"]
-    },
-    {
-      "name": "nuegas-task-management",
-      "order": 4,
-      "enabled": true,
-      "type": "github",
-      "category": ["Static Website"]
     },
     {
       "name": "react-monorepo",
@@ -357,53 +363,130 @@
       "category": ["Web Development"]
     },
     {
-      "name": "react-authentication-ui",
+      "name": "news-flutter",
       "order": 3,
       "enabled": true,
       "type": "github",
-      "category": ["Static Website"]
+      "category": ["Mobile App Development"]
     },
     {
-      "name": "react-phone-dialer",
+      "name": "predictive-api",
+      "order": 4,
+      "enabled": true,
+      "type": "github",
+      "category": ["Backend Development"]
+    },
+    {
+      "name": "react-authentication-ui",
       "order": 5,
       "enabled": true,
       "type": "github",
       "category": ["Static Website"]
     },
     {
-      "name": "three-js",
+      "name": "fitme-food-delivery-ui",
       "order": 6,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "three-js",
+      "order": 7,
       "enabled": true,
       "type": "github",
       "category": ["Web Development"]
     },
     {
-      "name": "Bidmii",
-      "order": 2,
+      "name": "react-phone-dialer",
+      "order": 8,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "react-url-shortener",
+      "order": 9,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "nuegas-task-management",
+      "order": 10,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "react-horizon-ui",
+      "order": 11,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "whatsapp-feedback-backend",
+      "order": 12,
+      "enabled": true,
+      "type": "github",
+      "category": ["Backend Development"]
+    },
+    {
+      "name": "weather-app",
+      "order": 13,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "Quiz-Flutter",
+      "order": 14,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "flutter-game",
+      "order": 15,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "bmi-calculator",
+      "order": 16,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "expense-calc",
+      "order": 17,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "flutter-task-manager",
+      "order": 18,
+      "enabled": true,
+      "type": "github",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "Angular Chat",
+      "order": 19,
       "enabled": true,
       "type": "json",
       "category": ["Web Development"]
     },
     {
-      "name": "Expense Calc",
-      "order": 6,
+      "name": "Angular Postman",
+      "order": 20,
       "enabled": true,
       "type": "json",
-      "category": ["Mobile App Development"]
-    },
-    {
-      "name": "BMI Calculator",
-      "order": 7,
-      "enabled": true,
-      "type": "json",
-      "category": ["Mobile App Development"]
-    },
-    {
-      "name": "React URL Shortner",
-      "order": 8,
-      "enabled": true,
-      "type": "json",
-      "category": ["Static Website"]
+      "category": ["Web Development"]
     }
   ],
   "socials": {
