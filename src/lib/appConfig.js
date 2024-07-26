@@ -3,5 +3,5 @@ export const appConfig = {
     perPage: 1000,
     initialPage: 1,
   },
-  pageCount: 3,
+  pageCount: 6,
 };
