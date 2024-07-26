@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 // import { useState } from 'react';
-import Container from '../../ui/container';
+import Container from "../../ui/container";
 // import Image from '../../ui/image';
 // import Mark from "../../../assets/Images/logos/Mark.svg"
-import Icons from '../../ui/icons';
-import { useContext } from 'react';
+import Icons from "../../ui/icons";
+import { useContext } from "react";
 import { PortfolioContext } from "../../../context/protfolioContext";
-import { cn } from '../../../lib/utils';
+import { cn } from "../../../lib/utils";
 
 // const secondaryLinks = [
 //   {
@@ -44,70 +44,69 @@ import { cn } from '../../../lib/utils';
 // ];
 
 function Footer() {
-  const profileData = useContext(PortfolioContext);
+  const { portfolioData } = useContext(PortfolioContext);
   // const [currentYear] = useState(() => new Date().getFullYear());
 
-  let socials =[
+  let socials = [
     {
-      label: profileData.socials?.github?.label,
-      href: profileData.socials?.github?.url,
+      label: portfolioData.socials?.github?.label,
+      href: portfolioData.socials?.github?.url,
       icon: Icons.GitHub,
     },
     {
-      label: profileData.socials?.facebook?.label,
-      href: profileData.socials?.facebook?.url,
+      label: portfolioData.socials?.facebook?.label,
+      href: portfolioData.socials?.facebook?.url,
       icon: Icons.Facebook,
     },
     {
-      label: profileData.socials?.linkedin?.label,
-      href: profileData.socials?.linkedin?.url,
+      label: portfolioData.socials?.linkedin?.label,
+      href: portfolioData.socials?.linkedin?.url,
       icon: Icons.LinkedIn,
     },
     {
-      label: profileData.socials?.upwork?.label,
-      href: profileData.socials?.upwork?.url,
+      label: portfolioData.socials?.upwork?.label,
+      href: portfolioData.socials?.upwork?.url,
       icon: Icons.UpWork,
-    },
-  ]
-
-  const primaryLinks = [
-    {
-      label: 'About',
-      href: '/#about',
-      enable:profileData?.website?.enable_section.about
-    },
-    {
-      label: 'Work',
-      href: '/#work',
-      enable:profileData?.website?.enable_section.work
-    },
-    {
-      label: 'Customer Stories',
-      href: '/#stories',
-      enable:profileData?.website?.enable_section.about
-    },
-    {
-      label: 'Contact',
-      href: '/#contact',
-      enable:profileData?.website?.enable_section.contact
-    },
-    {
-      label: 'Source code',
-      href: '/#source-code',
-      enable:profileData?.website?.enable_section.soucrCode
-    },
-    {
-      label: 'Services',
-      href: '/#services',
-      enable:profileData?.website?.enable_section.service
-    },
-    {
-      label: 'Blog',
-      href: '/blog',
-      enable:profileData?.website?.enable_section.blogs
     },
   ];
 
+  const primaryLinks = [
+    {
+      label: "About",
+      href: "/#about",
+      enable: portfolioData?.website?.enable_section.about,
+    },
+    {
+      label: "Work",
+      href: "/#work",
+      enable: portfolioData?.website?.enable_section.work,
+    },
+    {
+      label: "Customer Stories",
+      href: "/#stories",
+      enable: portfolioData?.website?.enable_section.about,
+    },
+    {
+      label: "Contact",
+      href: "/#contact",
+      enable: portfolioData?.website?.enable_section.contact,
+    },
+    {
+      label: "Source code",
+      href: "/#source-code",
+      enable: portfolioData?.website?.enable_section.soucrCode,
+    },
+    {
+      label: "Services",
+      href: "/#services",
+      enable: portfolioData?.website?.enable_section.service,
+    },
+    {
+      label: "Blog",
+      href: "/blog",
+      enable: portfolioData?.website?.enable_section.blogs,
+    },
+  ];
 
   return (
     <footer

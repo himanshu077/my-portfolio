@@ -3,7 +3,6 @@ import { motion, useMotionValue } from "framer-motion";
 import React from "react";
 
 function ServiceGrid({ services }) {
-  console.log(services, "services");
   const mousePositionX = useMotionValue(0);
   const mousePositionY = useMotionValue(0);
 

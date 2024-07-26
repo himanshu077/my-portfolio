@@ -181,7 +181,7 @@
     },
     {
       "id": "5",
-      "name": "Full Stack Web Development",
+      "name": "Full Stack Development",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
       "enabled": true
     }
@@ -189,17 +189,15 @@
   "projects": [
     {
       "id": "1",
-      "category_id": "1",
       "enabled": true,
       "name": "Bidmii",
-      "tags": ["Website"],
       "description": "Bidmii helps you find local contractors with verified reviews, get multiple free quotes, and holds payments in trust.",
       "project_link": "",
       "live_link": "https://www.bidmii.com",
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BIDMI.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/my-portfolio/main/src/assets/Images/BIDMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -211,7 +209,6 @@
     },
     {
       "id": "2",
-      "category_id": "2",
       "enabled": true,
       "name": "Expense Calc",
       "description": "Expense Calc is a simple and easy to use expense tracking application. It is designed to be intuitive and easy to use, and it is perfect for people who want to keep track of their spending.",
@@ -221,7 +218,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/expenseCalculator.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/my-portfolio/main/src/assets/Images/expenseCalculator.png",
         "alt": ""
       },
       "image_gallery": [
@@ -233,7 +230,6 @@
     },
     {
       "id": "3",
-      "category_id": "2",
       "enabled": true,
       "name": "BMI Calculator",
       "description": "BMI Calculator is a simple and easy to use application that helps you calculate your Body Mass Index (BMI).",
@@ -243,7 +239,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BMI.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/my-portfolio/main/src/assets/Images/BMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -255,7 +251,6 @@
     },
     {
       "id": "4",
-      "category_id": "5",
       "enabled": false,
       "name": "Angular Chat",
       "description": "This is a real-time chat application built using Angular for the frontend, with a Node.js backend using Socket.io for WebSocket communication. The app allows users to join different chat rooms, exchange messages, and engage in conversations seamlessly.",
@@ -265,7 +260,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://img.freepik.com/premium-vector/cell-phone-sms-email-communications-seamless-pattern_738121-441.jpg",
+        "src": "https://raw.githubusercontent.com/himanshu077/my-portfolio/main/src/assets/Images/chat.png",
         "alt": ""
       },
       "image_gallery": [
@@ -277,7 +272,6 @@
     },
     {
       "id": "5",
-      "category_id": "5",
       "enabled": false,
       "name": "Angular Postman",
       "description": "Angular Postman is a purpose-built project for efficient API testing, utilizing Angular CLI.",
@@ -299,7 +293,6 @@
     },
     {
       "id": "6",
-      "category_id": "2",
       "enabled": false,
       "name": "Quiz Flutter",
       "description": "Quiz app is a mobile application that allows users to take quizzes on various topics and subjects. The app is built using Flutter, and it is designed to be user-friendly and intuitive.",
@@ -321,7 +314,6 @@
     },
     {
       "id": "7",
-      "category_id": "3",
       "enabled": true,
       "name": "React URL Shortner",
       "description": "React URL Shortener is a simple and easy to use application that helps you shorten long URLs. Perfect for people who want to shorten their URLs.",
@@ -331,7 +323,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/ShortenUrl.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/my-portfolio/main/src/assets/Images/ShortenUrl.png",
         "alt": ""
       },
       "image_gallery": [
@@ -340,13 +332,78 @@
         { "id": "3", "src": "", "alt": "" }
       ],
       "technologies": ["React", "Material UI", "Tailwind CSS", "Vercel"]
+    }
+  ],
+  "activeProjects": [
+    {
+      "name": "ai-chat",
+      "order": 1,
+      "enabled": true,
+      "type": "github",
+      "category": ["Full Stack Development"]
     },
     {
-      "id": "8",
-      "name": "React Monorepo",
-      "tags": "Website",
-      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
-      "enabled": false
+      "name": "nuegas-task-management",
+      "order": 4,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "react-monorepo",
+      "order": 2,
+      "enabled": true,
+      "type": "github",
+      "category": ["Web Development"]
+    },
+    {
+      "name": "react-authentication-ui",
+      "order": 3,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "react-phone-dialer",
+      "order": 5,
+      "enabled": true,
+      "type": "github",
+      "category": ["Static Website"]
+    },
+    {
+      "name": "three-js",
+      "order": 6,
+      "enabled": true,
+      "type": "github",
+      "category": ["Web Development"]
+    },
+    {
+      "name": "Bidmii",
+      "order": 2,
+      "enabled": true,
+      "type": "json",
+      "category": ["Web Development"]
+    },
+    {
+      "name": "Expense Calc",
+      "order": 6,
+      "enabled": true,
+      "type": "json",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "BMI Calculator",
+      "order": 7,
+      "enabled": true,
+      "type": "json",
+      "category": ["Mobile App Development"]
+    },
+    {
+      "name": "React URL Shortner",
+      "order": 8,
+      "enabled": true,
+      "type": "json",
+      "category": ["Static Website"]
     }
   ],
   "socials": {
@@ -369,6 +426,11 @@
       "url": "https://www.upwork.com/fl/himanshu077",
       "label": "View UpWork Profile",
       "className": "fa-brands fa-upwork"
+    },
+    "freelancer": {
+      "url": "https://www.freelancer.in/u/himanshu077",
+      "label": "View Freelancer Profile",
+      "className": ""
     }
   },
   "services": {

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+}
+
 @layer utilities {
   .color-scheme-dark {
     color-scheme: dark;
@@ -72,7 +80,7 @@ pre[class*='language-'] {
   color: #fffef9;
 }
 
-pre > code[class*='language-'] {
+pre>code[class*='language-'] {
   font-size: 1em;
 }
 
@@ -89,7 +97,7 @@ pre[class*='language-'] {
   overflow: auto;
 }
 
-:not(pre) > code[class*='language-'] {
+:not(pre)>code[class*='language-'] {
   padding: 0.1em;
 }
 
@@ -174,7 +182,7 @@ code.language-scss,
   cursor: help;
 }
 
-pre > code.highlight {
+pre>code.highlight {
   outline: 0.4rem solid #38bdf8;
   outline-offset: 0.4rem;
 }
