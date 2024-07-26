@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import Section from "../../ui/section";
 import Container from "../../ui/container";
 import { Caption, Heading, Paragraph } from "../../ui/typography";
 import ServiceGrid from "../../ServiceGrid";
-import { PortfolioContext } from "../../../context/protfolioContext";
+import { usePortfolio } from "../../../context/protfolioContext";
 
 const Services = () => {
-  const projectData = useContext(PortfolioContext);
+  const { portfolioData } = usePortfolio();
   return (
     <Section
       id="services"
@@ -28,7 +28,7 @@ const Services = () => {
             </span>
           </Paragraph>
         </div>
-        <ServiceGrid visible="client" services={projectData?.services} />
+        <ServiceGrid visible="client" services={portfolioData?.services} />
       </Container>
     </Section>
   );

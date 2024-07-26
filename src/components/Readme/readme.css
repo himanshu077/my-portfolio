@@ -1,0 +1,127 @@
+/* Markdown styles */
+.markdown-container .prose {
+  --tw-prose-body: #e5e7eb;
+  --tw-prose-headings: white;
+  --tw-prose-lead: #e5e7eb;
+  --tw-prose-links: #e5e7eb;
+  --tw-prose-bold: #e5e7eb;
+  --tw-prose-counters: #e5e7eb;
+  --tw-prose-bullets: #e5e7eb;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #e5e7eb;
+  --tw-prose-quote-borders: #e5e7eb;
+  --tw-prose-captions: #e5e7eb;
+  --tw-prose-kbd: #e5e7eb;
+  --tw-prose-kbd-shadows: 17 24 39;
+  --tw-prose-code: #e5e7eb;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #e5e7eb;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #e5e7eb;
+  --tw-prose-invert-hr: #e5e7eb;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #e5e7eb;
+  --tw-prose-invert-captions: #e5e7eb;
+  --tw-prose-invert-kbd: #fff;
+  --tw-prose-invert-kbd-shadows: 255 255 255;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #e5e7eb;
+  --tw-prose-invert-td-borders: #e5e7eb;
+  font-size: 1rem !important;
+  line-height: 1.5;
+}
+
+/* For targetting p tag with img */
+.markdown-container p:has(> img) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.markdown-container .prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  padding: 2px 10px !important;
+  border-radius: 4px;
+}
+
+.markdown-container .codeStyle {
+  position: relative;
+}
+
+.markdown-container .codeStyle button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.markdown-container .syntaxHighlightContainer {
+  position: relative;
+}
+
+/* Copy button style */
+.markdown-container .copyButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.markdown-container .copyButton:hover {
+  color: #9ca3af;
+}
+
+
+/* For styling the code block coming inside the backticks, you can use the following CSS code: */
+.markdown-container code:not(pre code) {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: black;
+  color: aqua;
+  border-radius: 0.5em;
+  padding: 0.2em 0.4em;
+}
+
+/* For backticks appearing in the code block */
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+  content: "" !important;
+  color: #e5e7eb;
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+  content: "" !important;
+  color: #e5e7eb;
+}
+
+/* Disable the borders and Enhance the code block appearance */
+.markdown-container .prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  background-color: transparent !important;
+}
+
+.markdown-container .prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}

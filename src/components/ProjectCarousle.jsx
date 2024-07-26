@@ -1,134 +1,23 @@
-import Container from './ui/container';
-import Icons from './ui/icons';
-import { clamp, cn, formatDate } from '../lib/utils';
-import { Listbox } from '@headlessui/react';
-import { cx } from 'class-variance-authority';
+import Container from "./ui/container";
+import Icons from "./ui/icons";
+import { clamp, cn, extractName } from "../lib/utils";
+import { Listbox } from "@headlessui/react";
+import { cx } from "class-variance-authority";
 import {
   AnimatePresence,
   motion,
   useMotionValue,
   useMotionValueEvent,
   useTransform,
-} from 'framer-motion';
-import {
-  Fragment,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-import { PortfolioContext } from '../context/protfolioContext';
-
-function ProjectSlide({
-  project,
-  index,
-  currentIndex,
-  isDisabled,
-  isDragging,
-  carouselWidth,
-  scrollPosition,
-}) {
-  const slideRef = useRef(null);
-  const [slideOffsetLeft, setSlideOffsetLeft] = useState(0);
-  const [slideWidth, setSlideWidth] = useState(0);
-  const imagePosition = useTransform(
-    scrollPosition,
-    [slideOffsetLeft + slideWidth, slideOffsetLeft - carouselWidth],
-    ['0%', '100%'],
-  );
-  const updateSlideConstraints = useCallback(() => {
-    if (!slideRef.current) return;
-
-    setSlideOffsetLeft(slideRef.current.offsetLeft);
-    setSlideWidth(slideRef.current.offsetWidth);
-  }, []);
-
-  useEffect(() => {
-    updateSlideConstraints();
-
-    window.addEventListener('resize', updateSlideConstraints);
-    window.addEventListener('orientationchange', updateSlideConstraints);
-
-    return () => {
-      window.removeEventListener('resize', updateSlideConstraints);
-      window.removeEventListener('orientationchange', updateSlideConstraints);
-    };
-  }, [updateSlideConstraints]);
-
-  return (
-    <motion.li
-      key={project.id}
-      ref={slideRef}
-      aria-labelledby={`project-item-${project.id}-heading`}
-      data-item-index={index}
-      aria-current={currentIndex === index}
-      aria-hidden={isDisabled}
-      className="relative aspect-[2/3] w-[clamp(18rem,42vmin,26rem)] overflow-hidden rounded-md"
-    >
-      <a
-        href={`/project/${project.id}`}
-        aria-label={isDisabled ? undefined : `Show ${project.name} project details`}
-        data-astro-prefetch
-        aria-disabled={isDisabled}
-        className={cx(
-          'group block h-full w-full rounded-md border border-neutrals-50/30',
-          (isDisabled || isDragging) && 'pointer-events-none',
-        )}
-        draggable={false}
-      >
-        <article
-          className={cn(
-            'absolute inset-0 flex flex-col items-center justify-center gap-y-2 bg-neutrals-900/50 p-4 text-center opacity-0 backdrop-blur-sm transition-opacity duration-300',
-            !isDisabled && 'group-hover:opacity-100 group-focus-visible:opacity-100',
-          )}
-        >
-          <div className="overflow-hidden">
-            <time
-              dateTime={project.date}
-              className="block translate-y-full text-xs uppercase text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0"
-            >
-              {formatDate(project.date)}
-            </time>
-          </div>
-          <div className="overflow-hidden">
-            <h3
-              id={`project-item-${project.id}-heading`}
-              className="translate-y-full text-2xl font-bold transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-4xl"
-            >
-              {project.name}
-            </h3>
-          </div>
-          {project.tags && Array.isArray(project.tags) && (
-            <div className="overflow-hidden">
-              <p className="translate-y-full text-xs text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-sm">
-                {project.tags.join(', ')}
-              </p>
-            </div>
-          )}
-        </article>
-        <motion.img
-          src={project.poster?.src || project.image || ''}
-          alt={project.poster?.alt || project.name || ''}
-          loading="lazy"
-          decoding="async"
-          className={cn(
-            'pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700 ',
-            isDisabled ? 'opacity-20 grayscale' : 'group-hover:scale-105 group-focus-visible:scale-105',
-          )}
-          style={{
-            objectPosition: imagePosition,
-          }}
-        />
-      </a>
-    </motion.li>
-  );
-}
-
+} from "framer-motion";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import { appEnvs } from "../lib/env";
+import ProjectSlide from "./ProjectSlide";
+import { usePortfolio } from "../context/protfolioContext";
 
 function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
   const [selectedFilters, setSelectedFilters] = selectedFiltersState;
-  const [isOpen,setIsOpen]=useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Listbox
@@ -212,22 +101,29 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
 
 const CAROUSEL_SLIDES_GAP = 24;
 
-function ProjectCarousel({ projects }) {
+function ProjectCarousel({ projects = [] }) {
   const carouselWrapperRef = useRef(null);
   const carouselRef = useRef(null);
   const [carouselWidth, setCarouselWidth] = useState(0);
   const [carouselSlideWidth, setCarouselSlideWidth] = useState(0);
   const [maxScrollWidth, setMaxScrollWidth] = useState(0);
   const scrollPosition = useMotionValue(0);
-  const scrollProgress = useTransform(scrollPosition, [0, maxScrollWidth], ['0%', '100%']);
+  const scrollProgress = useTransform(
+    scrollPosition,
+    [0, maxScrollWidth],
+    ["0%", "100%"]
+  );
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState(null);
-  const portfolioData = useContext(PortfolioContext);
-  const categories = portfolioData && portfolioData.categories ? portfolioData.categories.filter(category => category.enabled) : [];
-  const projectTagFilters = categories.map(category => category.name);
+  const { portfolioData } = usePortfolio();
+  const categories =
+    portfolioData && portfolioData.categories
+      ? portfolioData.categories.filter((category) => category.enabled)
+      : [];
+  const projectTagFilters = categories.map((category) => category.name);
   // const wildcardFilter = 'Web Development';
-  const [selectedFilters, setSelectedFilters] = useState(['All']);
+  const [selectedFilters, setSelectedFilters] = useState(["All"]);
   const updateCarouselConstraints = useCallback(() => {
     if (
       !carouselWrapperRef.current ||
@@ -237,19 +133,24 @@ function ProjectCarousel({ projects }) {
       return;
 
     setCarouselWidth(carouselWrapperRef.current.offsetWidth);
-    setCarouselSlideWidth((carouselRef.current.firstElementChild).offsetWidth);
-    setMaxScrollWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+    setCarouselSlideWidth(carouselRef.current.firstElementChild.offsetWidth);
+    setMaxScrollWidth(
+      carouselRef.current.scrollWidth - carouselRef.current.offsetWidth
+    );
   }, []);
 
   useEffect(() => {
     updateCarouselConstraints();
 
-    window.addEventListener('resize', updateCarouselConstraints);
-    window.addEventListener('orientationchange', updateCarouselConstraints);
+    window.addEventListener("resize", updateCarouselConstraints);
+    window.addEventListener("orientationchange", updateCarouselConstraints);
 
     return () => {
-      window.removeEventListener('resize', updateCarouselConstraints);
-      window.removeEventListener('orientationchange', updateCarouselConstraints);
+      window.removeEventListener("resize", updateCarouselConstraints);
+      window.removeEventListener(
+        "orientationchange",
+        updateCarouselConstraints
+      );
     };
   }, [updateCarouselConstraints]);
 
@@ -257,20 +158,22 @@ function ProjectCarousel({ projects }) {
     setCurrentSlide(
       clamp(
         0,
-        Math.round(latestScrollPosition / (carouselSlideWidth + CAROUSEL_SLIDES_GAP)),
-        projects.length - 1,
-      ),
+        Math.round(
+          latestScrollPosition / (carouselSlideWidth + CAROUSEL_SLIDES_GAP)
+        ),
+        projects.length - 1
+      )
     );
   }
 
-  useMotionValueEvent(scrollPosition, 'change', updateCurrentSlide);
+  useMotionValueEvent(scrollPosition, "change", updateCurrentSlide);
 
   function scrollToSlide(slideIndex) {
     if (!carouselRef.current) return;
 
     carouselRef.current.scrollTo({
       left: slideIndex * (carouselSlideWidth + CAROUSEL_SLIDES_GAP),
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }
 
@@ -286,7 +189,7 @@ function ProjectCarousel({ projects }) {
     (event) => {
       scrollPosition.set(event.currentTarget.scrollLeft);
     },
-    [scrollPosition],
+    [scrollPosition]
   );
 
   const handleMouseDown = useCallback((event) => {
@@ -294,7 +197,7 @@ function ProjectCarousel({ projects }) {
 
     if (isMainMouseButtonClicked) {
       setDragStart({
-        scrollX: (event.currentTarget).scrollLeft,
+        scrollX: event.currentTarget.scrollLeft,
         pointerX: event.clientX,
       });
     }
@@ -316,41 +219,17 @@ function ProjectCarousel({ projects }) {
         if (!isDragging) setIsDragging(true);
       }
     },
-    [dragStart, isDragging],
+    [dragStart, isDragging]
   );
 
-  // const filteredProjects = projects.filter((project) => {
-  //   const projectCategories = Array.isArray(project.category_id) ? project.category_id : [project.category_id];
-  //   const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
-  //     projectCategories.includes(selectedFilter)
-  //   );
-  //   if (isAnyProjectTagFiltered) return true;
-  
-  //   const isWildcardFilterEnabledAndNoProjectTagFiltered =
-  //     selectedFilters.includes(wildcardFilter) &&
-  //     !projectCategories.some((projectTag) => projectTagFilters.includes(projectTag));
-  //   return isWildcardFilterEnabledAndNoProjectTagFiltered;
-  // });  
-
-
-  const categoryIds = selectedFilters.map(filter => {
-    const category = categories.find(cat => cat.name === filter);
-    return category ? category.id : null;
-});
-
-const filteredProjects = selectedFilters.includes("All")
-  ? projects
-  : projects.filter((project) => categoryIds.includes(project.category_id));
-
-
   return (
-    <div
-      ref={carouselWrapperRef}
-      className="mt-4 w-full"
-    >
+    <div ref={carouselWrapperRef} className="mt-4 w-full">
       <Container>
         <div className="flex items-center justify-center">
-          <ProjectFiltersSelect selectedFiltersState={[selectedFilters, setSelectedFilters]} projectTagFilters={projectTagFilters} />
+          <ProjectFiltersSelect
+            selectedFiltersState={[selectedFilters, setSelectedFilters]}
+            projectTagFilters={projectTagFilters}
+          />
         </div>
       </Container>
       <div className="relative py-8">
@@ -389,22 +268,83 @@ const filteredProjects = selectedFilters.includes("All")
             onMouseUpCapture={handleMouseUp}
             onMouseMoveCapture={handleMouseMove}
             className={cn(
-              'grid auto-cols-min grid-flow-col gap-x-6 overflow-x-auto pe-[calc(50vw-(clamp(18rem,42vmin,26rem)+1.5rem)/2)] ps-[calc(50vw-clamp(18rem,42vmin,26rem)/2-7px)]',
-              isDragging && 'cursor-grabbing',
+              "grid auto-cols-min grid-flow-col gap-x-6 overflow-x-auto pe-[calc(50vw-(clamp(18rem,42vmin,26rem)+1.5rem)/2)] ps-[calc(50vw-clamp(18rem,42vmin,26rem)/2-7px)]",
+              isDragging && "cursor-grabbing"
             )}
           >
-            {projects.map((project, index) => (
+            {(projects || []).map((project, index) => {
+              if (project.default_branch) {
+                return (
+                  <ProjectSlide
+                    key={project.id}
+                    id={project.name}
+                    name={extractName(project.name)}
+                    image={`https://raw.githubusercontent.com/${appEnvs.REACT_APP_GITHUB_USERNAME}/${project.name}/main/logo.png`}
+                    createdAt={project.created_at}
+                    tags={project.topics}
+                    index={index}
+                    currentIndex={currentSlide}
+                    // isDisabled={!filteredProjects.includes(project)}
+                    isDisabled={false}
+                    isDragging={isDragging}
+                    carouselWidth={carouselWidth}
+                    scrollPosition={scrollPosition}
+                  />
+                );
+              }
+
+              return (
+                <ProjectSlide
+                  key={project.id}
+                  id={project.id}
+                  name={project.name}
+                  image={project.poster.src}
+                  createdAt={project.date}
+                  tags={project.tags}
+                  index={index}
+                  currentIndex={currentSlide}
+                  // isDisabled={!filteredProjects.includes(project)}
+                  isDisabled={false}
+                  isDragging={isDragging}
+                  carouselWidth={carouselWidth}
+                  scrollPosition={scrollPosition}
+                />
+              );
+            })}
+            {/* {repos.map((repo, index) => (
               <ProjectSlide
-                key={project.id}
-                project={project}
+                key={repo.id}
+                id={repo.name}
+                name={extractName(repo.name)}
+                image={`https://raw.githubusercontent.com/${appEnvs.REACT_APP_GITHUB_USERNAME}/${repo.name}/main/logo.png`}
+                createdAt={repo.created_at}
+                tags={repo.topics}
                 index={index}
                 currentIndex={currentSlide}
-                isDisabled={!filteredProjects.includes(project)}
+                // isDisabled={!filteredProjects.includes(project)}
+                isDisabled={false}
                 isDragging={isDragging}
                 carouselWidth={carouselWidth}
                 scrollPosition={scrollPosition}
               />
             ))}
+            {projects.map((project, index) => (
+              <ProjectSlide
+                key={project.id}
+                id={project.id}
+                name={project.name}
+                image={project.image}
+                createdAt={project.date}
+                tags={project.tags}
+                index={index}
+                currentIndex={currentSlide}
+                // isDisabled={!filteredProjects.includes(project)}
+                isDisabled={false}
+                isDragging={isDragging}
+                carouselWidth={carouselWidth}
+                scrollPosition={scrollPosition}
+              />
+            ))} */}
           </ul>
         </div>
         <p
