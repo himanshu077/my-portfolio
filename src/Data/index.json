@@ -426,12 +426,8 @@
       "url": "https://www.upwork.com/fl/himanshu077",
       "label": "View UpWork Profile",
       "className": "fa-brands fa-upwork"
-    },
-    "freelancer": {
-      "url": "https://www.freelancer.in/u/himanshu077",
-      "label": "View Freelancer Profile",
-      "className": ""
     }
+   
   },
   "services": {
     "webApplicationDevelopment": {
