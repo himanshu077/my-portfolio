@@ -384,6 +384,13 @@
       "category": ["Backend Development"]
     },
     {
+      "name": "react-working-hours",
+      "order": 4,
+      "enabled": true,
+      "type": "github",
+      "category": ["Web Development"]
+    },
+    {
       "name": "react-authentication-ui",
       "order": 5,
       "enabled": true,
