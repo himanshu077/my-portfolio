@@ -377,6 +377,13 @@
       "category": ["Backend Development"]
     },
     {
+      "name": "prisma-crud-node",
+      "order": 4,
+      "enabled": true,
+      "type": "github",
+      "category": ["Backend Development"]
+    },
+    {
       "name": "react-authentication-ui",
       "order": 5,
       "enabled": true,
