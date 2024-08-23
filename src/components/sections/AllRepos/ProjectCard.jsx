@@ -21,22 +21,22 @@ const ProjectCard = ({
     >
       <Link
         to={`/project/${id}`}
-        className={cx(
-          "group block h-full w-full rounded-md"
-        )}
+        className={cx("group block h-full w-full rounded-md")}
         draggable={false}
       >
         <article
           className={cn(
             "absolute inset-0 flex flex-col items-center justify-center gap-y-2 bg-neutrals-900/50 p-4 text-center opacity-0 backdrop-blur-sm transition-opacity duration-300",
-            !isDisabled &&
-              "group-hover:opacity-100 group-focus-visible:opacity-100"
+            // !isDisabled &&
+            //   "group-hover:opacity-100 group-focus-visible:opacity-100"
+            !isDisabled && "opacity-100 group-focus-visible:opacity-100"
           )}
         >
           <div className="overflow-hidden">
             <time
               dateTime={createdAt}
-              className="block translate-y-full text-xs uppercase text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0"
+              // className="block translate-y-full text-xs uppercase text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0"
+              className="block text-xs uppercase text-neutrals-50/90 transition-transform duration-300 translate-y-0 group-focus-visible:translate-y-0"
             >
               {formatDate(createdAt)}
             </time>
@@ -44,7 +44,8 @@ const ProjectCard = ({
           <div className="overflow-hidden">
             <h3
               id={`project-item-${id}-heading`}
-              className="translate-y-full text-2xl font-bold transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-4xl capitalize"
+              // className="translate-y-full text-2xl font-bold transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-4xl capitalize"
+              className="translate-y-0 text-2xl font-bold transition-transform duration-300 lg:text-4xl capitalize"
             >
               {name}
             </h3>
@@ -64,9 +65,12 @@ const ProjectCard = ({
           decoding="async"
           className={cn(
             "pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700 ",
+            // isDisabled
+            //   ? "opacity-20 grayscale"
+            //   : "group-hover:scale-105 group-focus-visible:scale-105"
             isDisabled
               ? "opacity-20 grayscale"
-              : "group-hover:scale-105 group-focus-visible:scale-105"
+              : "group-hover:scale-110 group-focus-visible:scale-110"
           )}
         />
       </Link>
