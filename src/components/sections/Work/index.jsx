@@ -32,7 +32,7 @@ const Work = () => {
       if (proj) {
         allProjects.push({
           ...proj,
-          localInfo: activeProjectsCopy.find((item) => item.name === project)
+          localInfo: activeProjectsCopy.find((item) => item.name === project),
         });
       }
     }
