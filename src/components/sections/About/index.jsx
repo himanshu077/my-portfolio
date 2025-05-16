@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AboutImage from "../../../assets/Images/about-img.png";
-import { Caption, Paragraph } from "../../ui/typography";
+import { Caption } from "../../ui/typography";
 import TypingHeading from "../../TypingHeading";
 import Image from "../../ui/image";
 import { usePortfolio } from "../../../context/protfolioContext";
+import ReadMe from "../../Readme";
+import { fetchMarkDownFile } from "../../../lib/markdown";
 
 const About = () => {
   const { portfolioData } = usePortfolio();
   const aboutData = portfolioData && portfolioData.website;
+  const [markdown, setMarkdown] = useState(null);
+
+  useEffect(() => {
+    fetchMarkDownFile(3)  // 3 is the ID for about.md in MarkdownFilesMap
+      .then((md) => {
+        setMarkdown(md);
+      });
+  }, []);
 
   return (
     <section
@@ -28,9 +38,7 @@ const About = () => {
             visible="client"
             headings={aboutData ? aboutData.landing_page.about.heading : []}
           />
-          <Paragraph>
-            {aboutData ? aboutData.landing_page.about.description : ""}
-          </Paragraph>
+          <ReadMe markdown={markdown} />
         </div>
       </div>
     </section>
