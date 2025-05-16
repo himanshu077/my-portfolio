@@ -84,16 +84,26 @@
     "landing_page": {
       "hero_image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
       "about": {
-        "title": "Full Stack Developer | React.js, Node.Js, Angular, React native",
+        "title": "Building Scalable & High-Performance Web & Mobile Solutions | AI",
         "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
         "heading": [
           "Full Stack Developer",
           "React Developer",
-          "NodeJS Designer",
+          "NodeJS Designer", 
           "UI/UX Designer",
-          "Mobile Developer"
+          "Mobile Developer",
+          "Salesforce Developer",
+          "Next.js Developer",
+          "Angular Developer",
+          "Vue.js Developer",
+          "GraphQL Developer",
+          "MongoDB Developer",
+          "Flutter Developer",
+          "Python Developer",
+          "Django Developer",
+          "AI Developer"
         ],
-        "description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications. I have a strong eye for detail and a keen understanding of user experience. I'm always looking to learn and improve my skills and abilities."
+        "description": "3"
       }
     },
     "enable_section": {
@@ -513,11 +523,6 @@
       "url": "https://www.linkedin.com/in/himanshu077",
       "label": "View Linked Profile",
       "className": "fa-brands fa-linkedin"
-    },
-    "facebook": {
-      "url": "https://www.facebook.com/himanshu064",
-      "label": "View Facebook Profile",
-      "className": "fa-brands fa-facebook"
     },
     "upwork": {
       "url": "https://www.upwork.com/fl/himanshu077",
