@@ -37,8 +37,7 @@ function ContactForm() {
 
   const phone = watch("phone");
   const isValidPhoneNumber = isPhoneValid(phone);
-  console.log(isValidPhoneNumber, "isValidPhoneNumber");
-
+  
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const timezoneInfo = countriesAndTimezones.getTimezone(timezone);
   const defalutCountryCode = timezoneInfo?.countries?.[0]?.toLocaleLowerCase();
