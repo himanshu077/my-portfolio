@@ -352,6 +352,13 @@
   ],
   "activeProjects": [
     {
+      "name": "twilio-gemini-caller",
+      "order": 0,
+      "enabled": true,
+      "type": "github",
+      "category": ["Full Stack Development"]
+    },
+    {
       "name": "Bidmii",
       "order": 0,
       "enabled": true,
@@ -511,7 +518,7 @@
       "enabled": true,
       "type": "json",
       "category": ["Web Development"]
-    }
+    } 
   ],
   "socials": {
     "github": {
