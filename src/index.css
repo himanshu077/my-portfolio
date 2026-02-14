@@ -35,28 +35,26 @@ body,
 
   .scrollbar-none {
     scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      @apply hidden;
-    }
   }
 
-  .scrollbar-stylized {
-    &::-webkit-scrollbar {
-      @apply w-1.5;
-    }
+  .scrollbar-none::-webkit-scrollbar {
+    @apply hidden;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      @apply rounded-full bg-neutrals-50/15;
-    }
+  .scrollbar-stylized::-webkit-scrollbar {
+    @apply w-1.5;
+  }
 
-    &::-webkit-scrollbar-track {
-      @apply bg-inherit;
-    }
+  .scrollbar-stylized::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-neutrals-50/15;
+  }
 
-    &::-webkit-scrollbar-thumb:hover {
-      @apply bg-neutrals-50/20;
-    }
+  .scrollbar-stylized::-webkit-scrollbar-track {
+    @apply bg-inherit;
+  }
+
+  .scrollbar-stylized::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutrals-50/20;
   }
 }
 
