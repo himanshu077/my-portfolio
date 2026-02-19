@@ -348,6 +348,27 @@
         { "id": "3", "src": "", "alt": "" }
       ],
       "technologies": ["React", "Material UI", "Tailwind CSS", "Vercel"]
+    },
+    {
+      "id": "chartlock",
+      "enabled": true,
+      "name": "ChartLock",
+      "description": "HIPAA-compliant medical chart generation platform where physicians dictate patient encounters and AI produces structured, EMR-ready medical charts with zero PHI storage.",
+      "project_link": "",
+      "live_link": "",
+      "tags": ["hipaa", "azure", "healthcare", "ai", "security", "backend"],
+      "date": "2024-01-01",
+      "poster": {
+        "id": "chartlock-poster",
+        "src": "https://img.freepik.com/free-photo/doctor-using-digital-tablet-hospital_23-2148050483.jpg",
+        "alt": "ChartLock - HIPAA-compliant medical chart generation platform"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Node.js", "TypeScript", "Azure Functions", "Azure OpenAI", "Azure Cosmos DB", "Azure API Management", "Azure Key Vault", "Azure AD", "Stripe", "GitHub Actions"]
     }
   ],
   "activeProjects": [
@@ -518,7 +539,14 @@
       "enabled": true,
       "type": "json",
       "category": ["Web Development"]
-    } 
+    },
+    {
+      "name": "ChartLock",
+      "order": -1,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Backend Development"]
+    }
   ],
   "socials": {
     "github": {
