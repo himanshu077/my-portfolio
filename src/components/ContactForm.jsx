@@ -11,11 +11,11 @@ import { Controller, useForm } from "react-hook-form";
 import { contactSubmissionSchema } from "../lib/validations/contact-submission";
 import { useState } from "react";
 import { usePortfolio } from "../context/protfolioContext";
-import axios from "axios";
 import { PhoneInput } from "react-international-phone";
 import * as countriesAndTimezones from "countries-and-timezones";
 import "./ContactForm.css";
 import { isPhoneValid } from "../lib/utils";
+import axios from "axios";
 import { appEnvs } from "../lib/env";
 
 function ContactForm() {
@@ -86,10 +86,10 @@ function ContactForm() {
 
     try {
       const response = await axios.post(
-        "https://p65drtxuxja4jbiupmsjzjugja0ylitp.lambda-url.ap-south-1.on.aws",
+        "https://curlys-webapp.vercel.app/api/contact",
         payload
       );
-      if (response.data.statusCode === 200) {
+      if (response.status === 200) {
         setIsSubmitSuccessful(true);
         reset();
       } else {
