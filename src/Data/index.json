@@ -350,6 +350,69 @@
       "technologies": ["React", "Material UI", "Tailwind CSS", "Vercel"]
     },
     {
+      "id": "snapback-returns",
+      "enabled": true,
+      "name": "Snapback Returns",
+      "description": "AI-powered returns management platform. Scans Gmail for purchase receipts using OpenAI, tracks return windows across 40+ retailers, and coordinates DoorDash courier pickups — all from a React Native mobile app.",
+      "project_link": "",
+      "live_link": "",
+      "tags": ["ai", "openai", "react-native", "expo", "aws", "doordash", "stripe", "returns"],
+      "date": "2024-06-01",
+      "poster": {
+        "id": "snapback-poster",
+        "src": "https://img.freepik.com/free-photo/parcel-delivery-service_1387-517.jpg",
+        "alt": "Snapback Returns - AI-powered returns management platform"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["React Native", "Expo", "TypeScript", "Node.js", "Express.js", "Prisma", "PostgreSQL", "OpenAI", "AWS Lambda", "AWS SQS", "DoorDash", "Stripe", "Klaviyo"]
+    },
+    {
+      "id": "smartcontact-ai",
+      "enabled": true,
+      "name": "SmartContact AI",
+      "description": "AI-powered lead generation platform for service businesses. Automates lead qualification via Google Gemini 2.0 voice calls and SMS nurture campaigns, with real-time routing, buyer portals, and analytics.",
+      "project_link": "",
+      "live_link": "https://smartcontact.software",
+      "tags": ["ai", "gemini", "twilio", "nextjs", "saas", "lead-generation", "voice", "sms"],
+      "date": "2025-01-01",
+      "poster": {
+        "id": "smartcontact-poster",
+        "src": "https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg",
+        "alt": "SmartContact AI - AI-powered lead generation platform"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "Google Gemini 2.0", "Twilio", "Google Cloud Run", "WebSocket"]
+    },
+    {
+      "id": "braverhood",
+      "enabled": true,
+      "name": "Braverhood",
+      "description": "HIPAA-compliant healthcare management platform for providers serving individuals with developmental disabilities. Handles care management, staff coordination, timekeeping, EVV, automated billing, and payroll on a serverless AWS architecture.",
+      "project_link": "",
+      "live_link": "",
+      "tags": ["hipaa", "healthcare", "angular", "aws", "serverless", "billing", "payroll", "ngrx"],
+      "date": "2022-01-01",
+      "poster": {
+        "id": "braverhood-poster",
+        "src": "https://img.freepik.com/free-photo/medical-workers-covid-19-vaccination-concept-confident-professional-doctor-female-nurse-blue-scrubs-smiling-cheerfully-showing-thumbs-up-approve-right-choice-white-background_1258-57359.jpg",
+        "alt": "Braverhood - HIPAA-compliant healthcare management platform"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Angular", "TypeScript", "NgRx", "Node.js", "AWS Lambda", "Aurora RDS", "Amazon SQS", "AWS Cognito", "Amazon S3", "Twilio", "AWS Textract", "AWS Amplify"]
+    },
+    {
       "id": "chartlock",
       "enabled": true,
       "name": "ChartLock",
@@ -542,10 +605,31 @@
     },
     {
       "name": "ChartLock",
-      "order": -1,
+      "order": -4,
       "enabled": true,
       "type": "json",
       "category": ["Full Stack Development", "Backend Development"]
+    },
+    {
+      "name": "Braverhood",
+      "order": -3,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "SmartContact AI",
+      "order": -2,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "Snapback Returns",
+      "order": -1,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Mobile App Development"]
     }
   ],
   "socials": {
