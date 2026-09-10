@@ -1,78 +1,85 @@
 import React from "react";
-import { cx } from "class-variance-authority";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { cn, formatDate } from "../../../lib/utils";
-import Badge from "../../ui/badge";
+import Thumbnail from "../../ui/thumbnail";
+
+const MAX_TAGS = 3;
 
 const ProjectCard = ({
   id,
   name,
-  image,
+  sources,
+  description,
   tags = [],
   createdAt,
   isDisabled = false,
 }) => {
+  const visibleTags = tags.slice(0, MAX_TAGS);
+  const hiddenCount = tags.length - visibleTags.length;
+
   return (
     <motion.li
-      key={id}
       aria-labelledby={`project-item-${id}-heading`}
-      className="relative aspect-[2/3] w-[clamp(18rem,42vmin,26rem)] overflow-hidden rounded-md  border border-neutrals-50/30"
+      className={cn(
+        "group relative flex h-full flex-col overflow-hidden rounded-xl border border-neutrals-600/60 bg-neutrals-800/60 transition-[border-color,box-shadow,transform] duration-300",
+        "hover:-translate-y-1 hover:border-primary/70 hover:shadow-[0_12px_40px_-12px_rgba(105,25,255,0.45)]",
+        "focus-within:border-primary/70",
+        isDisabled && "opacity-40 grayscale"
+      )}
     >
       <Link
         to={`/project/${id}`}
-        className={cx("group block h-full w-full rounded-md")}
         draggable={false}
+        className="flex h-full flex-col outline-none"
       >
-        <article
-          className={cn(
-            "absolute inset-0 flex flex-col items-center justify-center gap-y-2 bg-neutrals-900/50 p-4 text-center opacity-0 backdrop-blur-sm transition-opacity duration-300",
-            // !isDisabled &&
-            //   "group-hover:opacity-100 group-focus-visible:opacity-100"
-            !isDisabled && "opacity-100 group-focus-visible:opacity-100"
-          )}
-        >
-          <div className="overflow-hidden">
+        <div className="relative aspect-video w-full overflow-hidden border-b border-neutrals-600/60 bg-neutrals-900">
+          <Thumbnail
+            key={sources.join("|")}
+            sources={sources}
+            alt={name}
+            className="transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105"
+          />
+          {createdAt && (
             <time
               dateTime={createdAt}
-              // className="block translate-y-full text-xs uppercase text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0"
-              className="block text-xs uppercase text-neutrals-50/90 transition-transform duration-300 translate-y-0 group-focus-visible:translate-y-0"
+              className="absolute left-3 top-3 rounded-full bg-neutrals-900/80 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide text-neutrals-200 backdrop-blur"
             >
               {formatDate(createdAt)}
             </time>
-          </div>
-          <div className="overflow-hidden">
-            <h3
-              id={`project-item-${id}-heading`}
-              // className="translate-y-full text-2xl font-bold transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-4xl capitalize"
-              className="translate-y-0 text-2xl font-bold transition-transform duration-300 lg:text-4xl capitalize"
-            >
-              {name}
-            </h3>
-          </div>
-          {tags?.length > 0 && (
-            <div className="overflow-hidden flex flex-wrap justify-center gap-2 mt-3">
-              {tags.map((tag, idx) => (
-                <Badge key={`tag__${idx}`} text={tag} />
+          )}
+        </div>
+
+        <div className="flex flex-1 flex-col gap-2 p-4">
+          <h3
+            id={`project-item-${id}-heading`}
+            className="text-lg font-semibold capitalize leading-snug text-neutrals-50 transition-colors group-hover:text-primary"
+          >
+            {name}
+          </h3>
+          {description && (
+            <p className="line-clamp-2 text-sm leading-relaxed text-neutrals-300">
+              {description}
+            </p>
+          )}
+          {visibleTags.length > 0 && (
+            <ul className="mt-auto flex flex-wrap gap-1.5 pt-2">
+              {visibleTags.map((tag) => (
+                <li
+                  key={tag}
+                  className="rounded-md border border-neutrals-600/70 bg-neutrals-700/50 px-2 py-0.5 text-xs text-neutrals-200"
+                >
+                  {tag}
+                </li>
               ))}
-            </div>
+              {hiddenCount > 0 && (
+                <li className="rounded-md px-2 py-0.5 text-xs text-neutrals-400">
+                  +{hiddenCount}
+                </li>
+              )}
+            </ul>
           )}
-        </article>
-        <motion.img
-          src={image || ""}
-          alt={name || ""}
-          loading="lazy"
-          decoding="async"
-          className={cn(
-            "pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700 ",
-            // isDisabled
-            //   ? "opacity-20 grayscale"
-            //   : "group-hover:scale-105 group-focus-visible:scale-105"
-            isDisabled
-              ? "opacity-20 grayscale"
-              : "group-hover:scale-110 group-focus-visible:scale-110"
-          )}
-        />
+        </div>
       </Link>
     </motion.li>
   );

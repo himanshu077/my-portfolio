@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
 import { extractName } from "../../../lib/utils";
-import { appEnvs } from "../../../lib/env";
+import { getThumbnailSources } from "../../../lib/thumbnails";
 import ProjectCard from "./ProjectCard";
 import { paginator } from "../../../lib/paginator";
 import Button from "../../ui/button";
+import Container from "../../ui/container";
 import ProjectFilters from "./ProjectFilters";
 import { usePortfolio } from "../../../context/protfolioContext";
 import { filterProjectsByCategory } from "./categoryFilter";
@@ -43,35 +44,24 @@ const AllRepos = ({ projects = [] }) => {
         />
       </div>
       {(paginatedProject || []).length > 0 ? (
-        <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-          {(paginatedProject || []).map((project, index) => {
-            if (project.default_branch) {
-              return (
-                <ProjectCard
-                  key={project.id}
-                  id={project.name}
-                  name={extractName(project.name)}
-                  image={`https://raw.githubusercontent.com/${appEnvs.REACT_APP_GITHUB_USERNAME}/${project.name}/main/logo.png`}
-                  createdAt={project.created_at}
-                  tags={project.topics}
-                  // isDisabled={!filteredProjects.includes(project)}
-                />
-              );
-            }
-
+        <Container>
+          <ul className="grid grid-cols-1 gap-6 mt-10 mb-5 sm:grid-cols-2 lg:grid-cols-3">
+          {(paginatedProject || []).map((project) => {
+            const isGithubRepo = Boolean(project.default_branch);
             return (
               <ProjectCard
                 key={project.id}
-                id={project.id}
-                name={project.name}
-                image={project.poster.src}
-                createdAt={project.date}
-                tags={project.tags}
-                // isDisabled={!filteredProjects.includes(project)}
+                id={isGithubRepo ? project.name : project.id}
+                name={isGithubRepo ? extractName(project.name) : project.name}
+                sources={getThumbnailSources(project)}
+                description={project.description}
+                createdAt={isGithubRepo ? project.created_at : project.date}
+                tags={isGithubRepo ? project.topics : project.tags}
               />
             );
           })}
-        </div>
+          </ul>
+        </Container>
       ) : (
         <div className="absolute top-[75%] flex items-center justify-center w-full text-neutrals-400">
           No projects found for this category
