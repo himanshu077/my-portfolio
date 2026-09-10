@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e1f"/>
+      <stop offset="1" stop-color="#161a2c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6919ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6919ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2e364f" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Agent graph illustration -->
+  <g stroke="#a87dff" stroke-width="2" fill="none" stroke-opacity="0.8">
+    <path d="M900 250 L780 400"/>
+    <path d="M900 250 L900 400"/>
+    <path d="M900 250 L1020 400"/>
+    <path d="M780 400 L900 540"/>
+    <path d="M900 400 L900 540"/>
+    <path d="M1020 400 L900 540"/>
+  </g>
+  <circle cx="900" cy="250" r="60" fill="#6919ff" opacity="0.5" filter="url(#soft)"/>
+  <g>
+    <circle cx="900" cy="250" r="46" fill="#161a2c" stroke="#6919ff" stroke-width="3"/>
+    <text x="900" y="256" text-anchor="middle" font-size="16" font-weight="700" fill="#f0f2fe">Manager</text>
+  </g>
+  <g fill="#161a2c" stroke="#4d5775" stroke-width="2">
+    <rect x="710" y="368" width="140" height="64" rx="12"/>
+    <rect x="830" y="368" width="140" height="64" rx="12"/>
+    <rect x="950" y="368" width="140" height="64" rx="12"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#c7d0e5" text-anchor="middle">
+    <text x="780" y="395">Data Analyst</text>
+    <text x="900" y="395">Research</text>
+    <text x="1020" y="395">Comms</text>
+  </g>
+  <g font-size="11" fill="#6f7a9b" text-anchor="middle">
+    <text x="780" y="416">SQL · metrics</text>
+    <text x="900" y="416">RAG · web</text>
+    <text x="1020" y="416">email · CRM</text>
+  </g>
+  <g>
+    <rect x="800" y="512" width="200" height="56" rx="12" fill="#161a2c" stroke="#00f090" stroke-width="2"/>
+    <text x="900" y="546" text-anchor="middle" font-size="15" font-weight="700" fill="#00f090">Report + approvals</text>
+  </g>
+
+  <!-- Copy -->
+  <g>
+    <rect x="88" y="200" width="150" height="34" rx="17" fill="#6919ff" fill-opacity="0.18" stroke="#6919ff" stroke-opacity="0.6"/>
+    <text x="163" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#c2a6ff">AGENTIC AI OPS</text>
+  </g>
+  <text x="88" y="318" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Orqestra</text>
+  <text x="90" y="372" font-size="26" fill="#c7d0e5">A Manager agent plans, delegates,</text>
+  <text x="90" y="408" font-size="26" fill="#c7d0e5">and reports back with approvals.</text>
+  <g font-size="15" fill="#96a1c0">
+    <text x="90" y="480">Next.js 16 · Vercel AI SDK · pgvector · Drizzle · Auth.js</text>
+  </g>
+</svg>

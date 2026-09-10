@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e1f"/>
+      <stop offset="1" stop-color="#161a2c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.55" r="0.5">
+      <stop offset="0" stop-color="#6919ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#6919ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2e364f" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Chat window illustration -->
+  <rect x="700" y="150" width="480" height="420" rx="20" fill="#161a2c" stroke="#2e364f" stroke-width="2"/>
+  <rect x="700" y="150" width="480" height="52" rx="20" fill="#23263b"/>
+  <rect x="700" y="182" width="480" height="20" fill="#23263b"/>
+  <circle cx="728" cy="176" r="6" fill="#ff2e5b"/>
+  <circle cx="748" cy="176" r="6" fill="#ffdc30"/>
+  <circle cx="768" cy="176" r="6" fill="#00f090"/>
+  <text x="940" y="181" text-anchor="middle" font-size="13" fill="#96a1c0">AI Chatbot</text>
+
+  <!-- user bubble -->
+  <rect x="890" y="230" width="260" height="46" rx="14" fill="#6919ff"/>
+  <text x="1020" y="259" text-anchor="middle" font-size="15" fill="#ffffff">Explain streaming responses</text>
+
+  <!-- bot bubble -->
+  <rect x="730" y="300" width="330" height="118" rx="14" fill="#23263b"/>
+  <g font-size="14" fill="#c7d0e5">
+    <text x="748" y="328">Tokens arrive one by one</text>
+    <text x="748" y="352">over a streamed HTTP</text>
+    <text x="748" y="376">response, so the reply</text>
+    <text x="748" y="400">renders as it is written.</text>
+  </g>
+
+  <!-- typing dots -->
+  <g fill="#6f7a9b">
+    <circle cx="752" cy="452" r="5"/>
+    <circle cx="770" cy="452" r="5" opacity="0.7"/>
+    <circle cx="788" cy="452" r="5" opacity="0.4"/>
+  </g>
+
+  <!-- input -->
+  <rect x="724" y="500" width="432" height="46" rx="23" fill="#0b0e1f" stroke="#2e364f"/>
+  <text x="748" y="529" font-size="14" fill="#4d5775">Message…</text>
+  <circle cx="1132" cy="523" r="16" fill="#6919ff"/>
+  <path d="M1126 523 L1138 523 M1133 518 L1138 523 L1133 528" stroke="#fff" stroke-width="2" fill="none"/>
+
+  <!-- Copy -->
+  <g>
+    <rect x="88" y="200" width="196" height="34" rx="17" fill="#6919ff" fill-opacity="0.18" stroke="#6919ff" stroke-opacity="0.6"/>
+    <text x="186" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#c2a6ff">STREAMING CHAT APP</text>
+  </g>
+  <text x="88" y="318" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">AI Chatbot</text>
+  <text x="90" y="372" font-size="26" fill="#c7d0e5">A ChatGPT-style assistant with</text>
+  <text x="90" y="408" font-size="26" fill="#c7d0e5">Google sign-in and saved history.</text>
+  <text x="90" y="480" font-size="15" fill="#96a1c0">Next.js 14 · Vercel AI SDK · Groq · Auth.js · Prisma</text>
+</svg>

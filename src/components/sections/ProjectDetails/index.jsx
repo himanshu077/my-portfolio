@@ -8,6 +8,8 @@ import { usePortfolio } from "../../../context/protfolioContext";
 import Badge from "../../ui/badge";
 import ReadMe from "../../../components/Readme";
 import { fetchMarkDownFile } from "../../../lib/markdown";
+import { getThumbnailSources } from "../../../lib/thumbnails";
+import Thumbnail from "../../ui/thumbnail";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -61,20 +63,31 @@ const ProjectDetails = () => {
     }
   }, [project?.id]);
 
+  const coverSources = getThumbnailSources(isJsonProject ? project : githubRepo);
+
   return (
     <div>
       <section
         aria-labelledby="project-details-heading"
-        className="relative flex min-h-screen w-full bg-neutrals-900 py-[14vh] after:absolute after:inset-0 after:h-full after:w-full after:bg-gradient-to-t after:from-neutrals-900 after:to-neutrals-900/60"
+        className="relative flex min-h-screen w-full bg-neutrals-900 py-[14vh]"
         key={repo?.id}
       >
-        {/* <Image
-            alt={repo.image}
-            loading="eager"
-            decoding="sync"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            src={repo.image}
-          /> */}
+        {coverSources.length > 0 && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-[70vh] overflow-hidden lg:left-[42%]"
+          >
+            <Thumbnail
+              key={coverSources.join("|")}
+              sources={coverSources}
+              alt=""
+              eager
+              className="origin-top-right object-right-top opacity-40 saturate-[.85] lg:scale-125 lg:opacity-50"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-neutrals-900 via-neutrals-900/30 via-35% to-neutrals-900" />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutrals-900 via-neutrals-900/60 via-40% to-neutrals-900/10" />
+          </div>
+        )}
         <Container>
           {!loading && Object.keys(repo).length > 0 && (
             <div className="relative z-10 flex h-full flex-col">

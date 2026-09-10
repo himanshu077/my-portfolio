@@ -432,6 +432,237 @@
         { "id": "3", "src": "", "alt": "" }
       ],
       "technologies": ["Node.js", "TypeScript", "Azure Functions", "Azure OpenAI", "Azure Cosmos DB", "Azure API Management", "Azure Key Vault", "Azure AD", "Stripe", "GitHub Actions"]
+    },
+    {
+      "id": "orqestra",
+      "enabled": true,
+      "name": "Orqestra",
+      "description": "Agentic AI operations platform. A Manager agent plans a plain-English business objective, delegates to Data Analyst, Research and Communication agents that use real tools against business data, and returns a structured report with sensitive actions queued for human approval.",
+      "project_link": "https://github.com/himanshu064/Orqestra",
+      "live_link": "https://orqestra-flax.vercel.app",
+      "tags": ["ai", "agents", "multi-agent", "rag", "pgvector", "nextjs", "saas", "human-in-the-loop"],
+      "date": "2026-09-01",
+      "poster": {
+        "id": "orqestra-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/Orqestra",
+        "alt": "Orqestra - Agentic AI operations platform"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Vercel AI SDK", "OpenAI", "Anthropic Claude", "Google Gemini", "Drizzle ORM", "Neon Postgres", "pgvector", "Auth.js", "Resend", "Vitest"]
+    },
+    {
+      "id": "multi-agent-orchestrator",
+      "enabled": true,
+      "name": "Multi-Agent Orchestrator",
+      "description": "Proof of concept for a multi-agent AI pipeline. An orchestrator splits a goal into tasks, worker agents run in parallel, and a synthesizer merges the output, with every stage streamed live to a React Flow diagram over Server-Sent Events.",
+      "project_link": "https://github.com/himanshu064/multi-agent-orchestrator",
+      "live_link": "https://multi-agent-orchestrator-three.vercel.app",
+      "tags": ["ai", "agents", "multi-agent", "sse", "nextjs", "react-flow", "openai", "gemini", "claude"],
+      "date": "2026-09-01",
+      "poster": {
+        "id": "multi-agent-orchestrator-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/multi-agent-orchestrator",
+        "alt": "Multi-Agent Orchestrator - Proof of concept for a multi-agent AI pipeline"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Flow", "Vercel AI SDK", "OpenAI", "Google Gemini", "Anthropic Claude", "Zod", "PostgreSQL", "Drizzle ORM"]
+    },
+    {
+      "id": "shopai-voice-agent",
+      "enabled": true,
+      "name": "ShopAI Voice Agent",
+      "description": "Demo electronics store with an AI support agent, Sarah, that customers can text or talk to in the browser. She looks up orders, checks return policy via RAG, edits the cart, cancels orders and books consultations through 17 signed server tools, with a full admin console.",
+      "project_link": "https://github.com/himanshu064/shopai-voice-agent",
+      "live_link": "https://shopai-voice-agent.vercel.app",
+      "tags": ["ai", "voice", "elevenlabs", "conversational-ai", "rag", "tool-calling", "ecommerce", "nextjs"],
+      "date": "2026-09-01",
+      "poster": {
+        "id": "shopai-voice-agent-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/shopai-voice-agent",
+        "alt": "ShopAI Voice Agent - Demo electronics store with an AI support agent, Sarah, that customers can text or talk to in the browser"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "ElevenLabs Conversational AI", "WebRTC", "Prisma", "Neon Postgres", "Zod"]
+    },
+    {
+      "id": "elevenlabs-voice-studio",
+      "enabled": true,
+      "name": "ElevenLabs Voice Studio",
+      "description": "Text-to-speech workbench for the four things that matter in production speech: voice quality, emotion, pacing and latency. Tune ElevenLabs models and voice settings, stream the audio, and watch a live time-to-first-audio metric.",
+      "project_link": "https://github.com/himanshu064/elevenlabs-voice-studio",
+      "live_link": "https://elevenlabs-voice-studio-omega.vercel.app",
+      "tags": ["ai", "voice", "text-to-speech", "elevenlabs", "streaming", "nextjs"],
+      "date": "2026-08-25",
+      "poster": {
+        "id": "elevenlabs-voice-studio-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/elevenlabs-voice-studio",
+        "alt": "ElevenLabs Voice Studio - Text-to-speech workbench for the four things that matter in production speech: voice quality, emotion, pacing and latency"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "ElevenLabs SDK", "Streaming API"]
+    },
+    {
+      "id": "n8n-projects",
+      "enabled": true,
+      "name": "n8n Automation Pipelines",
+      "description": "Two client automations built in n8n with Claude. A LinkedIn content pipeline that writes, QA-checks and queues a post a day for 90 days with Slack emoji approvals, and a YouTube audience report that scores every comment, writes a fact-checked report and delivers it to Docs, Gmail, Sheets and Slack.",
+      "project_link": "https://github.com/himanshu064/n8n-projects",
+      "live_link": "",
+      "tags": ["n8n", "automation", "ai", "claude", "supabase", "slack", "google-sheets", "youtube-api", "workflow"],
+      "date": "2026-08-24",
+      "poster": {
+        "id": "n8n-projects-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/n8n-projects",
+        "alt": "n8n Automation Pipelines - Two client automations built in n8n with Claude"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["n8n", "Anthropic Claude", "Supabase", "PostgreSQL", "Slack API", "Google Sheets", "Google Docs", "Gmail", "YouTube Data API", "Python"]
+    },
+    {
+      "id": "parsed",
+      "enabled": true,
+      "name": "Parsed",
+      "description": "AI-powered document chat. Upload PDF, DOCX, TXT or Markdown files and ask anything about them. Text is extracted in a background job, embedded into Pinecone, and Google Gemini answers with source citations.",
+      "project_link": "https://github.com/himanshu077/parsed",
+      "live_link": "https://parsed-topaz.vercel.app",
+      "tags": ["ai", "rag", "documents", "gemini", "pinecone", "nextjs", "inngest"],
+      "date": "2026-03-18",
+      "poster": {
+        "id": "parsed-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu077/parsed",
+        "alt": "Parsed - AI-powered document chat"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "TypeScript", "Better Auth", "Neon Postgres", "Drizzle ORM", "Vercel Blob", "Pinecone", "Google Gemini", "Pusher", "Inngest", "Resend"]
+    },
+    {
+      "id": "ai-chatbot",
+      "enabled": true,
+      "name": "AI Chatbot",
+      "description": "Full-stack ChatGPT-style chat app. Streams responses from Groq-hosted models through the Vercel AI SDK, with Google sign-in via Auth.js and per-user conversation history stored in PostgreSQL with Prisma.",
+      "project_link": "",
+      "live_link": "https://ai-chatbot-ten-beryl.vercel.app",
+      "tags": ["ai", "chatbot", "groq", "nextjs", "streaming", "auth"],
+      "date": "2024-05-24",
+      "poster": {
+        "id": "ai-chatbot-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/ai-chatbot",
+        "alt": "AI Chatbot - Full-stack ChatGPT-style chat app"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "TypeScript", "Vercel AI SDK", "Groq", "Auth.js", "Prisma", "PostgreSQL", "Zustand", "shadcn/ui", "Tailwind CSS"]
+    },
+    {
+      "id": "solstice",
+      "enabled": true,
+      "name": "Solstice",
+      "description": "Single-page concept site for Halo One, a levitating sculptural lamp, rendered as a live WebGL scene. Drag to orbit the lamp, scroll to pull it apart and sweep its light from candle-warm to daylight, then reserve one of a numbered run of 500.",
+      "project_link": "https://github.com/himanshu064/solstice",
+      "live_link": "https://solstice-fawn-nu.vercel.app",
+      "tags": ["webgl", "three-js", "3d", "nextjs", "creative", "landing-page", "scroll-animation"],
+      "date": "2026-07-14",
+      "poster": {
+        "id": "solstice-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/solstice",
+        "alt": "Solstice - Single-page concept site for Halo One, a levitating sculptural lamp, rendered as a live WebGL scene"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "three.js", "React Three Fiber", "Drei", "Motion", "Lenis"]
+    },
+    {
+      "id": "pelagic",
+      "enabled": true,
+      "name": "Pelagic",
+      "description": "Interactive single-page site for a fictional deep-sea expedition company. Scrolling is a dive from the surface to 3,800 m with a live depth HUD, cursor-reactive bioluminescent particles, 3D tilt cards, live telemetry, and a scroll-drawn dive timeline.",
+      "project_link": "https://github.com/himanshu064/pelagic",
+      "live_link": "https://pelagic-flax.vercel.app",
+      "tags": ["creative", "nextjs", "framer-motion", "scroll-animation", "landing-page", "canvas"],
+      "date": "2026-07-14",
+      "poster": {
+        "id": "pelagic-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/pelagic",
+        "alt": "Pelagic - Interactive single-page site for a fictional deep-sea expedition company"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Canvas API"]
+    },
+    {
+      "id": "apex",
+      "enabled": true,
+      "name": "Apex",
+      "description": "Award-site style scroll story for a fictional independent GP racing team. A masked wordmark filled with livery paint, a creed that inks in word by word, four circuits in a pinned horizontal reel with self-drawing track maps, and parallax livery plates.",
+      "project_link": "https://github.com/himanshu064/apex",
+      "live_link": "https://apex-wheat-five.vercel.app",
+      "tags": ["creative", "nextjs", "scroll-animation", "horizontal-scroll", "svg", "landing-page"],
+      "date": "2026-07-14",
+      "poster": {
+        "id": "apex-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/apex",
+        "alt": "Apex - Award-site style scroll story for a fictional independent GP racing team"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "SVG"]
+    },
+    {
+      "id": "hyper-liquid",
+      "enabled": true,
+      "name": "HyperLiquid Trading App",
+      "description": "Live perpetuals order book and trade history for the Hyperliquid exchange. Streams the level-2 book over WebSocket, polls market stats from the public API, and reconstructs complete trades from raw fills, like a lightweight exchange terminal.",
+      "project_link": "https://github.com/himanshu064/hyper-liquid",
+      "live_link": "https://hyper-liquid-alpha.vercel.app",
+      "tags": ["crypto", "trading", "order-book", "nextjs", "shadcn", "fintech", "real-time"],
+      "date": "2026-09-01",
+      "poster": {
+        "id": "hyper-liquid-poster",
+        "src": "https://opengraph.githubassets.com/1/himanshu064/hyper-liquid",
+        "alt": "HyperLiquid Trading App - Live perpetuals order book and trade history for the Hyperliquid exchange"
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Radix UI", "Recharts", "Zod", "WebSocket", "Hyperliquid API"]
     }
   ],
   "activeProjects": [
@@ -630,6 +861,83 @@
       "enabled": true,
       "type": "json",
       "category": ["Full Stack Development", "Mobile App Development"]
+    },
+    {
+      "name": "Orqestra",
+      "order": -11,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Backend Development"]
+    },
+    {
+      "name": "Multi-Agent Orchestrator",
+      "order": -10,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "ShopAI Voice Agent",
+      "order": -9,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "ElevenLabs Voice Studio",
+      "order": -8,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "n8n Automation Pipelines",
+      "order": -7,
+      "enabled": true,
+      "type": "json",
+      "category": ["Backend Development"]
+    },
+    {
+      "name": "Parsed",
+      "order": -6,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "AI Chatbot",
+      "order": -5,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "Solstice",
+      "order": -15,
+      "enabled": true,
+      "type": "json",
+      "category": ["Web Development", "UI/UX Design"]
+    },
+    {
+      "name": "Pelagic",
+      "order": -14,
+      "enabled": true,
+      "type": "json",
+      "category": ["Web Development", "UI/UX Design"]
+    },
+    {
+      "name": "Apex",
+      "order": -13,
+      "enabled": true,
+      "type": "json",
+      "category": ["Web Development", "UI/UX Design"]
+    },
+    {
+      "name": "HyperLiquid Trading App",
+      "order": -12,
+      "enabled": true,
+      "type": "json",
+      "category": ["Full Stack Development", "Web Development"]
     }
   ],
   "socials": {

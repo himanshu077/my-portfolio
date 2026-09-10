@@ -96,7 +96,7 @@ const ReadMe = ({ repo, branch, fileName = "README.md", markdown = "" }) => {
         <div className="syntaxHighlightContainer">
           <button
             className="copyButton"
-            onClick={() => copyToClipboard(children)}
+            onClick={() => copyToClipboard(String(children).replace(/\n$/, ""))}
           >
             Copy
           </button>
