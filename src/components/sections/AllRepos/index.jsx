@@ -7,7 +7,10 @@ import Button from "../../ui/button";
 import Container from "../../ui/container";
 import ProjectFilters from "./ProjectFilters";
 import { usePortfolio } from "../../../context/protfolioContext";
-import { filterProjectsByCategory } from "./categoryFilter";
+import {
+  filterProjectsByCategory,
+  buildCategoryOptions,
+} from "./categoryFilter";
 
 const AllRepos = ({ projects = [] }) => {
   const { portfolioData } = usePortfolio();
@@ -15,7 +18,10 @@ const AllRepos = ({ projects = [] }) => {
   const [paginatedProject, setPaginatedProjects] = React.useState([]);
 
   const [selectedFilter, setSelectedFilter] = React.useState("All");
-  const categories = portfolioData.categories.map((category) => category.name);
+  const categories = useMemo(
+    () => buildCategoryOptions(portfolioData.categories, projects),
+    [portfolioData.categories, projects]
+  );
 
   const filteredProjects = useMemo(() => {
     return filterProjectsByCategory(projects, selectedFilter);
@@ -35,14 +41,14 @@ const AllRepos = ({ projects = [] }) => {
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <Container className="flex items-center justify-center">
         <ProjectFilters
           selectedFilter={selectedFilter}
           setSelectedFilter={setSelectedFilter}
           projectTagFilters={categories}
           setPage={setPage}
         />
-      </div>
+      </Container>
       {(paginatedProject || []).length > 0 ? (
         <Container>
           <ul className="grid grid-cols-1 gap-6 mt-10 mb-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,9 +69,11 @@ const AllRepos = ({ projects = [] }) => {
           </ul>
         </Container>
       ) : (
-        <div className="absolute top-[75%] flex items-center justify-center w-full text-neutrals-400">
-          No projects found for this category
-        </div>
+        <Container className="mt-10 mb-5">
+          <p className="rounded-xl border border-dashed border-neutrals-600 py-16 text-center text-neutrals-400">
+            No projects in this category yet. Choose another filter or All.
+          </p>
+        </Container>
       )}
 
       {filteredProjects.length === paginatedProject.length ? null : (

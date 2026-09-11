@@ -22,7 +22,7 @@ const NotFound = () => {
                     <Paragraph>Let&apos;s rewind in time and get you...</Paragraph>
                     <a
                         href="/"
-                        class="group mt-3 flex -translate-x-3 items-center text-lg text-neutrals-50 transition-all duration-300 hover:translate-x-0 hover:text-primary focus-visible:translate-x-0 focus-visible:text-primary"
+                        className="group mt-3 flex -translate-x-3 items-center text-lg text-neutrals-50 transition-[translate,color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none hover:translate-x-0 hover:text-primary focus-visible:translate-x-0 focus-visible:text-primary"
                     >
                         <Icons.ChevronRight
                             aria-hidden="true"

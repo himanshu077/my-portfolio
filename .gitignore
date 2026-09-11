@@ -21,7 +21,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env
-.env*
 !.env.example
 *.bat
+
+# agent skills (installed via npx skills, see .claude/skills.md)
+/.agents
+/agent
+/.claude/skills
+/skills-lock.json
+config.bat

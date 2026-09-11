@@ -1,8 +1,14 @@
 import React from "react";
+import { cn } from "../../lib/utils";
 
-const Badge = ({ text }) => {
+const Badge = ({ text, className }) => {
   return (
-    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-500 hover:text-white">
+    <span
+      className={cn(
+        "inline-flex items-center rounded-full border border-neutrals-600/70 bg-neutrals-700/50 px-3 py-1 text-sm font-medium text-neutrals-200",
+        className
+      )}
+    >
       {text}
     </span>
   );

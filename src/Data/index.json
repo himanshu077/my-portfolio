@@ -166,6 +166,12 @@
       "enabled": true
     },
     {
+      "id": "7",
+      "name": "AI",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
       "id": "1",
       "name": "Web Development",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
@@ -671,7 +677,7 @@
       "order": 0,
       "enabled": true,
       "type": "github",
-      "category": ["Full Stack Development"]
+      "category": ["AI", "Full Stack Development"]
     },
     {
       "name": "Bidmii",
@@ -685,7 +691,7 @@
       "order": 1,
       "enabled": true,
       "type": "github",
-      "category": ["Full Stack Development"]
+      "category": ["AI", "Full Stack Development"]
     },
     {
       "name": "react-monorepo",
@@ -839,7 +845,7 @@
       "order": -4,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Backend Development"]
+      "category": ["AI", "Full Stack Development", "Backend Development"]
     },
     {
       "name": "Braverhood",
@@ -853,63 +859,63 @@
       "order": -2,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "Snapback Returns",
       "order": -1,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Mobile App Development"]
+      "category": ["AI", "Full Stack Development", "Mobile App Development"]
     },
     {
       "name": "Orqestra",
       "order": -11,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Backend Development"]
+      "category": ["AI", "Full Stack Development", "Backend Development"]
     },
     {
       "name": "Multi-Agent Orchestrator",
       "order": -10,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "ShopAI Voice Agent",
       "order": -9,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "ElevenLabs Voice Studio",
       "order": -8,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "n8n Automation Pipelines",
       "order": -7,
       "enabled": true,
       "type": "json",
-      "category": ["Backend Development"]
+      "category": ["AI", "Backend Development"]
     },
     {
       "name": "Parsed",
       "order": -6,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "AI Chatbot",
       "order": -5,
       "enabled": true,
       "type": "json",
-      "category": ["Full Stack Development", "Web Development"]
+      "category": ["AI", "Full Stack Development", "Web Development"]
     },
     {
       "name": "Solstice",

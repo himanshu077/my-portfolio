@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../../ui/container";
 import { Caption, Heading } from "../../ui/typography";
-// import ProjectCarousel from "../../ProjectCarousle";
 import Section from "../../ui/section";
 import { usePortfolio } from "../../../context/protfolioContext";
 import AllRepos from "../AllRepos";
@@ -53,7 +52,6 @@ const Work = () => {
           <Heading>Dig into my universe</Heading>
         </div>
       </Container>
-      {/* <ProjectCarousel idle="client" projects={sortedProjects} /> */}
       <AllRepos idle="client" projects={sortedProjects} />
     </Section>
   );
