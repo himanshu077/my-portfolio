@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e1f"/>
+      <stop offset="1" stop-color="#161a2c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f472b6" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2e364f" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Illustration -->
+  <circle cx="900" cy="380" r="70" fill="#f472b6" opacity="0.28" filter="url(#soft)"/>
+  <rect x="740" y="280" width="400" height="200" rx="12" fill="#161a2c" stroke="#4d5775" stroke-width="2"/>
+  <rect x="756" y="300" width="70" height="30" rx="8" fill="#00f090" fill-opacity="0.2" stroke="#00f090"/>
+  <text x="791" y="320" text-anchor="middle" font-size="13" font-weight="800" fill="#00f090">GET</text>
+  <rect x="836" y="300" width="200" height="30" rx="8" fill="#0b0e1f" stroke="#2e364f"/>
+  <text x="846" y="320" text-anchor="start" font-size="11" font-weight="500" fill="#96a1c0">https://api.example.com/users</text>
+  <rect x="1056" y="300" width="68" height="30" rx="8" fill="#f472b6"/>
+  <text x="1090" y="320" text-anchor="middle" font-size="13" font-weight="700" fill="#0b0e1f">Send</text>
+  <g font-size="13" fill="#96a1c0" font-family="ui-monospace, Menlo, monospace"><text x="756" y="362">{</text><text x="776" y="384">"status": <tspan fill="#00f090">200</tspan>,</text><text x="776" y="406">"data": [ ... ]</text><text x="756" y="428">}</text></g>
+  <text x="1120" y="460" text-anchor="end" font-size="12" font-weight="600" fill="#6f7a9b">212 ms</text>
+
+  <!-- Copy -->
+  <g>
+    <rect x="88" y="200" width="170" height="34" rx="17" fill="#f472b6" fill-opacity="0.18" stroke="#f472b6" stroke-opacity="0.6"/>
+    <text x="173.0" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#f9b1d7">API TESTING TOOL</text>
+  </g>
+  <text x="88" y="318" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">Angular Postman</text>
+  <text x="90" y="372" font-size="26" fill="#c7d0e5">A purpose-built REST client for</text>
+  <text x="90" y="408" font-size="26" fill="#c7d0e5">sending requests and inspecting responses.</text>
+  <g font-size="15" fill="#96a1c0">
+    <text x="90" y="480">Angular · Angular CLI · TypeScript · RxJS</text>
+  </g>
+</svg>

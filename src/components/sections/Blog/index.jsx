@@ -4,7 +4,6 @@ import { cn, formatDateWithDay } from "../../../lib/utils";
 import { Caption } from "../../ui/typography";
 import SanityImage from "../../ui/sanity-image";
 import { usePortfolio } from "../../../context/protfolioContext";
-import { blogPosts } from "./Data";
 const Blog = () => {
   const { portfolioData } = usePortfolio();
   return (
@@ -21,7 +20,7 @@ const Blog = () => {
           <div className="relative sm:ms-[calc(2rem+1px)] md:ms-[calc(3.5rem+1px)] lg:ms-[max(calc(14.5rem+1px),calc(100%-48rem))]">
             <Caption id="blog-heading">Blog</Caption>
             <h1 className="mb-4 text-balance text-3xl/tight font-bold text-neutrals-50 md:text-5xl/tight">
-              Daiy Blogs
+              Daily Blogs
             </h1>
             <p className="mb-11 max-w-prose text-base/relaxed text-neutrals-300 lg:mb-14">
               Welcome to my portfolio blog! Explore my latest thoughts,
@@ -34,7 +33,7 @@ const Blog = () => {
             <div className="absolute bottom-0 end-full top-3 me-7 hidden w-[0.5px] bg-neutrals-700 sm:block md:me-[3.25rem]"></div>
             <div className="flex flex-col gap-y-12">
               {portfolioData?.blogPosts?.map((blogPost, i) => (
-                <article className="!relative">
+                <article key={blogPost.slug.current} className="!relative">
                   <a
                     href={`/blog/${blogPost.slug.current}`}
                     aria-label={`Show ${blogPost.title} blog post`}
@@ -43,7 +42,7 @@ const Blog = () => {
                     <div
                       className={cn(
                         "pointer-events-none absolute end-full top-2 me-6 h-[calc(100%-0.5rem)] md:me-12",
-                        i === blogPosts.length - 1 &&
+                        i === portfolioData.blogPosts.length - 1 &&
                           "via-neutrals-transparent bg-gradient-to-t from-neutrals-900 via-transparent to-transparent"
                       )}
                     >
@@ -53,7 +52,7 @@ const Blog = () => {
                       <div className="mb-8 mt-10 w-full overflow-hidden rounded-md border-0.5 border-neutrals-50/40 lg:mt-0">
                         <SanityImage
                           src={blogPost.poster}
-                          alt="Lorem"
+                          alt={blogPost.title}
                           maxWidth={1024}
                           className="w-full"
                         />
@@ -66,7 +65,7 @@ const Blog = () => {
                       </p>
                       <p className="pointer-events-none absolute top-0 h-full max-lg:start-0 lg:end-full lg:me-[calc(6.5rem+1px)]">
                         <time
-                          dateTime="2023-08-07T10:30:00.000Z"
+                          dateTime={blogPost.date}
                           className="pointer-events-auto whitespace-nowrap text-sm/none text-neutrals-300 lg:sticky lg:top-24"
                         >
                           {formatDateWithDay(blogPost.date)}

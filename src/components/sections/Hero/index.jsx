@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-center">
           <h1
             id="hero-heading"
-            className="text-balance text-center text-4xl/tight font-bold text-white sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
+            className="text-balance text-center text-4xl/tight font-bold text-neutrals-50 sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
           >
             {data ? data.landing_page.about.title : ""}
           </h1>

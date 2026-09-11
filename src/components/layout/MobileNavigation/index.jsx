@@ -23,15 +23,10 @@ function MobileNavigation({ isOpen, onClose, links }) {
                     <Container>
                         <motion.nav
                             aria-label="Primary"
-                            initial={{ y: -10, rotateX: 25 }}
-                            animate={{
-                                y: 0,
-                                rotateX: 0,
-                            }}
-                            exit={{
-                                y: -10,
-                                rotateX: 25,
-                            }}
+                            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+                            animate={{ opacity: 1, transform: "translateY(0px)" }}
+                            exit={{ opacity: 0, transform: "translateY(-6px)" }}
+                            transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
                             className="flex flex-col justify-center divide-y-0.5 divide-neutrals-600"
                         >
                             {links.map((link, index) => (
@@ -40,8 +35,8 @@ function MobileNavigation({ isOpen, onClose, links }) {
                                     href={link.href}
                                     onClick={onClose}
                                     className={cn(
-                                        'py-4 ps-2 uppercase text-neutrals-200 transition-[letter-spacing,color]',
-                                        'hover:tracking-wider hover:text-neutrals-50 focus-visible:tracking-wider focus-visible:text-neutrals-50',
+                                        'py-4 ps-2 uppercase text-neutrals-200 transition-colors duration-150',
+                                        'hover:text-neutrals-50 focus-visible:text-neutrals-50',
                                         !link.enable && "hidden"
                                     )}
                                 >
@@ -65,7 +60,7 @@ function MobileNavigationOverlay({ isOpen, onClose }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.2, ease: [0.2, 0, 0, 1] }}
                     aria-hidden
                     onClick={onClose}
                     className="fixed inset-0 -z-10 bg-neutrals-900/90 backdrop-blur-sm lg:hidden"

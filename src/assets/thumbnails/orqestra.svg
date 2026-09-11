@@ -5,8 +5,8 @@
       <stop offset="1" stop-color="#161a2c"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.72" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#6919ff" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#6919ff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0H0V40" fill="none" stroke="#2e364f" stroke-opacity="0.35" stroke-width="1"/>
@@ -21,7 +21,7 @@
   <rect width="1280" height="720" fill="url(#glow)"/>
 
   <!-- Agent graph illustration -->
-  <g stroke="#a87dff" stroke-width="2" fill="none" stroke-opacity="0.8">
+  <g stroke="#7dd3fc" stroke-width="2" fill="none" stroke-opacity="0.8">
     <path d="M900 250 L780 400"/>
     <path d="M900 250 L900 400"/>
     <path d="M900 250 L1020 400"/>
@@ -29,9 +29,9 @@
     <path d="M900 400 L900 540"/>
     <path d="M1020 400 L900 540"/>
   </g>
-  <circle cx="900" cy="250" r="60" fill="#6919ff" opacity="0.5" filter="url(#soft)"/>
+  <circle cx="900" cy="250" r="60" fill="#38bdf8" opacity="0.5" filter="url(#soft)"/>
   <g>
-    <circle cx="900" cy="250" r="46" fill="#161a2c" stroke="#6919ff" stroke-width="3"/>
+    <circle cx="900" cy="250" r="46" fill="#161a2c" stroke="#38bdf8" stroke-width="3"/>
     <text x="900" y="256" text-anchor="middle" font-size="16" font-weight="700" fill="#f0f2fe">Manager</text>
   </g>
   <g fill="#161a2c" stroke="#4d5775" stroke-width="2">
@@ -56,8 +56,8 @@
 
   <!-- Copy -->
   <g>
-    <rect x="88" y="200" width="150" height="34" rx="17" fill="#6919ff" fill-opacity="0.18" stroke="#6919ff" stroke-opacity="0.6"/>
-    <text x="163" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#c2a6ff">AGENTIC AI OPS</text>
+    <rect x="88" y="200" width="150" height="34" rx="17" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.6"/>
+    <text x="163" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#bae6fd">AGENTIC AI OPS</text>
   </g>
   <text x="88" y="318" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Orqestra</text>
   <text x="90" y="372" font-size="26" fill="#c7d0e5">A Manager agent plans, delegates,</text>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e1f"/>
+      <stop offset="1" stop-color="#161a2c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00f090" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#00f090" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2e364f" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Illustration -->
+  <circle cx="900" cy="380" r="70" fill="#00f090" opacity="0.28" filter="url(#soft)"/>
+  <circle cx="900" cy="300" r="46" fill="#161a2c" stroke="#00f090" stroke-width="3"/>
+  <text x="900" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#f0f2fe">Provider</text>
+  <path d="M900 346 L780 420" stroke="#73f7c2" stroke-width="2" stroke-opacity="0.8" fill="none"/>
+  <path d="M900 346 L900 420" stroke="#73f7c2" stroke-width="2" stroke-opacity="0.8" fill="none"/>
+  <path d="M900 346 L1020 420" stroke="#73f7c2" stroke-width="2" stroke-opacity="0.8" fill="none"/>
+  <rect x="710" y="420" width="140" height="64" rx="12" fill="#161a2c" stroke="#4d5775" stroke-width="2"/>
+  <rect x="830" y="420" width="140" height="64" rx="12" fill="#161a2c" stroke="#4d5775" stroke-width="2"/>
+  <rect x="950" y="420" width="140" height="64" rx="12" fill="#161a2c" stroke="#4d5775" stroke-width="2"/>
+  <text x="780" y="447" text-anchor="middle" font-size="14" font-weight="600" fill="#c7d0e5">Care plans</text>
+  <text x="900" y="447" text-anchor="middle" font-size="14" font-weight="600" fill="#c7d0e5">Staff shifts</text>
+  <text x="1020" y="447" text-anchor="middle" font-size="14" font-weight="600" fill="#c7d0e5">Billing</text>
+  <text x="780" y="468" text-anchor="middle" font-size="11" font-weight="600" fill="#6f7a9b">goals · notes</text>
+  <text x="900" y="468" text-anchor="middle" font-size="11" font-weight="600" fill="#6f7a9b">schedule · EVV</text>
+  <text x="1020" y="468" text-anchor="middle" font-size="11" font-weight="600" fill="#6f7a9b">claims · audit</text>
+  <rect x="760" y="520" width="280" height="40" rx="20" fill="#161a2c" stroke="#00f090" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="900.0" y="545" text-anchor="middle" font-size="13" font-weight="700" fill="#59f5b7">HIPAA-COMPLIANT  ·  DD SERVICES</text>
+
+  <!-- Copy -->
+  <g>
+    <rect x="88" y="200" width="210" height="34" rx="17" fill="#00f090" fill-opacity="0.18" stroke="#00f090" stroke-opacity="0.6"/>
+    <text x="193.0" y="222" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="1.5" fill="#73f7c2">HEALTHCARE OPERATIONS</text>
+  </g>
+  <text x="88" y="318" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">Braverhood</text>
+  <text x="90" y="372" font-size="26" fill="#c7d0e5">Care management for providers serving</text>
+  <text x="90" y="408" font-size="26" fill="#c7d0e5">people with developmental disabilities.</text>
+  <g font-size="15" fill="#96a1c0">
+    <text x="90" y="480">Angular · TypeScript · NgRx · Node.js · AWS Lambda · Aurora RDS</text>
+  </g>
+</svg>

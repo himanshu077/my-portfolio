@@ -24,7 +24,7 @@ const CustomerStories = () => {
       <Container>
         <div className="!mb-16 !flex !flex-col !items-center !text-center">
           <Caption id="stories-heading">Customer Stories</Caption>
-          <Heading> Trusted by the kindest clients </Heading>
+          <Heading>Trusted by the kindest clients</Heading>
           <Paragraph>
             Here&apos;s a glimpse into the heartfelt experiences of my
             incredible clients.

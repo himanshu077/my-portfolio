@@ -22,8 +22,12 @@ const ProjectCard = ({
     <motion.li
       aria-labelledby={`project-item-${id}-heading`}
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-xl border border-neutrals-600/60 bg-neutrals-800/60 transition-[border-color,box-shadow,transform] duration-300",
-        "hover:-translate-y-1 hover:border-primary/70 hover:shadow-[0_12px_40px_-12px_rgba(105,25,255,0.45)]",
+        "group relative flex h-full flex-col rounded-xl border border-neutrals-600/60 bg-neutrals-800/60",
+        "transition-[border-color,translate,scale] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none motion-reduce:hover:translate-y-0",
+        "hover:-translate-y-1 hover:border-primary/70",
+        "active:translate-y-0 active:scale-[0.97] active:duration-150",
+        "after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:opacity-0 after:shadow-[0_12px_40px_-12px_rgba(105,25,255,0.45)]",
+        "after:transition-opacity after:duration-300 hover:after:opacity-100 motion-reduce:after:transition-none",
         "focus-within:border-primary/70",
         isDisabled && "opacity-40 grayscale"
       )}
@@ -31,14 +35,14 @@ const ProjectCard = ({
       <Link
         to={`/project/${id}`}
         draggable={false}
-        className="flex h-full flex-col outline-none"
+        className="flex h-full flex-col overflow-hidden rounded-xl outline-none"
       >
         <div className="relative aspect-video w-full overflow-hidden border-b border-neutrals-600/60 bg-neutrals-900">
           <Thumbnail
             key={sources.join("|")}
             sources={sources}
             alt={name}
-            className="transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105"
+            className="outline outline-1 -outline-offset-1 outline-[oklch(1_0_0_/_0.1)] transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none motion-reduce:group-hover:scale-100 group-hover:scale-105 group-focus-visible:scale-105"
           />
           {createdAt && (
             <time
@@ -73,7 +77,7 @@ const ProjectCard = ({
                 </li>
               ))}
               {hiddenCount > 0 && (
-                <li className="rounded-md px-2 py-0.5 text-xs text-neutrals-400">
+                <li className="rounded-md border border-transparent px-2 py-0.5 text-xs tabular-nums text-neutrals-400">
                   +{hiddenCount}
                 </li>
               )}

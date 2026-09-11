@@ -110,7 +110,7 @@ function Footer() {
 
   return (
     <footer
-      aria-label="Primary"
+      aria-label="Footer"
       className="relative z-10 w-full border-t-0.5 border-neutrals-600  bg-neutrals-900 py-3"
     >
       <Container>
@@ -129,7 +129,7 @@ function Footer() {
         </div> */}
         {/* <hr className="h-px border-0 bg-gradient-to-r from-transparent via-neutrals-600 to-transparent" /> */}
         <nav
-          aria-label="Primary"
+          aria-label="Footer"
           className="flex flex-wrap justify-center gap-6 py-12"
         >
           {primaryLinks.map((link) => (
