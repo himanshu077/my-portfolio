@@ -49,6 +49,6 @@
   <text x="90" y="372" font-size="26" fill="#c7d0e5">Gemini voice calls and SMS campaigns</text>
   <text x="90" y="408" font-size="26" fill="#c7d0e5">qualify leads for service businesses.</text>
   <g font-size="15" fill="#96a1c0">
-    <text x="90" y="480">Next.js · React · TypeScript · Gemini 2.0 · Twilio · Node.js</text>
+    <text x="90" y="480">Next.js · React · TypeScript · OpenAI Realtime · Twilio · Node.js</text>
   </g>
 </svg>

@@ -7,7 +7,7 @@ import { formatDate, extractName } from "../../../lib/utils";
 import { usePortfolio } from "../../../context/protfolioContext";
 import Badge from "../../ui/badge";
 import ReadMe from "../../../components/Readme";
-import { fetchMarkDownFile } from "../../../lib/markdown";
+import { fetchMarkDownFile, fetchGithubReadme } from "../../../lib/markdown";
 import { getThumbnailSources } from "../../../lib/thumbnails";
 import Thumbnail from "../../ui/thumbnail";
 
@@ -56,12 +56,13 @@ const ProjectDetails = () => {
     if (project?.id) {
       setLoading(true);
       fetchMarkDownFile(project.id)
+        .then((md) => md || fetchGithubReadme(project.project_link))
         .then((md) => {
           setMarkdown(md);
         })
         .finally(() => setLoading(false));
     }
-  }, [project?.id]);
+  }, [project?.id, project?.project_link]);
 
   const coverSources = getThumbnailSources(isJsonProject ? project : githubRepo);
 

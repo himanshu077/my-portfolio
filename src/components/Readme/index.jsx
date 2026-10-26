@@ -24,12 +24,15 @@ SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 
 const ReadMe = ({ repo, branch, fileName = "README.md", markdown = "" }) => {
-  const [readme, setReadme] = useState(null);
+  // undefined = still loading (render nothing), null = nothing to show
+  const [readme, setReadme] = useState(undefined);
 
   useEffect(() => {
     if (markdown) {
       setReadme(markdown);
-    } else {
+    } else if (markdown === "") {
+      setReadme(null);
+    } else if (repo && branch) {
       fetch(
         `https://raw.githubusercontent.com/${appEnvs.REACT_APP_GITHUB_USERNAME}/${repo}/${branch}/${fileName}`
       )
@@ -132,7 +135,7 @@ const ReadMe = ({ repo, branch, fileName = "README.md", markdown = "" }) => {
         >
           {readme}
         </Markdown>
-      ) : (
+      ) : readme === null && (
         <div className="flex">
           <p className="text-neutrals-400 font-semibold">No details available for this project!</p>
         </div>

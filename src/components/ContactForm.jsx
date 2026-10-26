@@ -16,7 +16,6 @@ import * as countriesAndTimezones from "countries-and-timezones";
 import "./ContactForm.css";
 import { isPhoneValid } from "../lib/utils";
 import axios from "axios";
-import { appEnvs } from "../lib/env";
 
 function ContactForm() {
   const { portfolioData } = usePortfolio();
@@ -30,6 +29,7 @@ function ContactForm() {
     control,
     reset,
     watch,
+    setError,
   } = useForm({
     resolver: zodResolver(contactSubmissionSchema),
     mode: "onChange",
@@ -70,33 +70,32 @@ function ContactForm() {
   //   }
   // }
 
+  const ownerEmail = portfolioData?.website?.email;
+
   const handleSubmitEmail = async (data) => {
     const payload = {
-      email: appEnvs.REACT_APP_CONTACT_US_RECEIVER_EMAIL,
-      subject: data.message,
-      body: `Hi Himanshu, I visited your website and I would like to connect with you. My name is ${
-        data.name
-      } and My email is <a href="mailto://${data.email}">${data.email}</a> ${
-        isValidPhoneNumber && data.phone
-          ? `, My phone number is <a href="tel:${data.phone}">${data.phone}</a>`
-          : ""
-      }. <br /> <h3>Message:</h3><p>${data.message || ""}</p>`,
-      phone: data.phone,
+      name: data.name,
+      email: data.email,
+      phone: isValidPhoneNumber ? data.phone : "",
+      message: data.message,
     };
 
+    // api/contact.js (Vercel function; src/setupProxy.js runs it under `npm start`)
+    // builds the email and sends it server-side.
+    const sendFailed = () =>
+      setError("root", {
+        message: `Your message could not be sent. Please email me at ${ownerEmail}.`,
+      });
     try {
-      const response = await axios.post(
-        "https://curlys-webapp.vercel.app/api/contact",
-        payload
-      );
-      if (response.status === 200) {
+      const response = await axios.post("/api/contact", payload);
+      if (response.status === 200 && response.data?.success !== false) {
         setIsSubmitSuccessful(true);
         reset();
       } else {
-        setIsSubmitSuccessful(false);
+        sendFailed();
       }
     } catch (error) {
-      setIsSubmitSuccessful(false);
+      sendFailed();
     }
   };
 

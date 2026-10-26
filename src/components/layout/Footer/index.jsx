@@ -54,11 +54,6 @@ function Footer() {
       icon: Icons.GitHub,
     },
     {
-      label: portfolioData.socials?.facebook?.label,
-      href: portfolioData.socials?.facebook?.url,
-      icon: Icons.Facebook,
-    },
-    {
       label: portfolioData.socials?.linkedin?.label,
       href: portfolioData.socials?.linkedin?.url,
       icon: Icons.LinkedIn,
@@ -68,7 +63,12 @@ function Footer() {
       href: portfolioData.socials?.upwork?.url,
       icon: Icons.UpWork,
     },
-  ];
+    {
+      label: portfolioData.socials?.fiverr?.label,
+      href: portfolioData.socials?.fiverr?.url,
+      icon: Icons.Fiverr,
+    },
+  ].filter((social) => social.href);
 
   const primaryLinks = [
     {

@@ -1,34 +1,34 @@
 {
   "website": {
     "title": "Himanshu's Portfolio",
-    "description": "Full Stack Developer with 8 year experience",
-    "bio": "My name is Himanshu, I'm a Full Stack ReactJS Developer. Currently I'm working as freelancer.",
+    "description": "Full Stack & AI Developer with 12+ years of experience",
+    "bio": "My name is Himanshu Kumar, a Full Stack & AI Developer with 12+ years of experience. Currently I'm working as a freelancer.",
     "contactmessage": "Get in touch with me to receive further details, get coached or anything else.",
     "email": "himanshukumar077@gmail.com",
     "phone": "+91 93547-21082",
     "keywords": [
-      "web design",
-      "web development",
-      "graphic design",
-      "branding",
-      "photography",
-      "illustration",
-      "motion design",
-      "3d design",
-      "ui/ux design",
-      "app design",
-      "print design",
-      "packaging design"
+      "full stack development",
+      "ai development",
+      "openai",
+      "claude",
+      "rag",
+      "ai voice agents",
+      "saas development",
+      "react",
+      "next.js",
+      "node.js",
+      "mobile app development",
+      "flutter"
     ],
     "address": {
       "street": "Pragati vihar",
-      "city": "Amabala Cantt",
+      "city": "Ambala Cantt",
       "state": "Haryana",
       "zip": "133001"
     },
-    "website": "https://portfolio-ten-gamma-30.vercel.app",
+    "website": "https://himanshu077.vercel.app",
     "resume": {
-      "downloadLink": "https://portfolio-ten-gamma-30.vercel.app",
+      "downloadLink": "https://himanshu077.vercel.app",
       "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
       "education": [
         {
@@ -84,24 +84,19 @@
     "landing_page": {
       "hero_image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
       "about": {
-        "title": "Building Scalable & High-Performance Web & Mobile Solutions | AI",
+        "title": "Full Stack & AI Developer | OpenAI, Claude, RAG | React, Next.js, Node.js",
         "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
         "heading": [
           "Full Stack Developer",
+          "AI Developer",
           "React Developer",
-          "NodeJS Designer", 
-          "UI/UX Designer",
-          "Mobile Developer",
-          "Salesforce Developer",
           "Next.js Developer",
+          "Node.js Developer",
+          "Mobile App Developer",
+          "Flutter Developer",
           "Angular Developer",
           "Vue.js Developer",
-          "GraphQL Developer",
-          "MongoDB Developer",
-          "Flutter Developer",
-          "Python Developer",
-          "Django Developer",
-          "AI Developer"
+          "Python Developer"
         ],
         "description": "3"
       }
@@ -119,41 +114,81 @@
   "testimonials": [
     {
       "id": "1",
-      "quote": "Great to work with Himanshu! Himanshu is very responsive and skilled professional designer, who enriches your views with creativity! Will sure work with Himanshu again!",
-      "name": "William Smith",
-      "designation": "",
+      "quote": "Excellent professional work. Himanshu completed the requested website updates carefully and accurately, tested everything, and followed the proper pull request and deployment workflow exactly as requested. … Very professional, reliable, and attentive to both the technical details and the compliance requirements of the project.",
+      "name": "David W.",
+      "designation": "United States · via Fiverr",
       "avatar": "",
       "enabled": true
     },
     {
       "id": "2",
-      "quote": "Himanshu is a great designer. He is very easy to work with and very responsive. I would highly recommend him.",
-      "name": "David Smith",
-      "designation": "",
+      "quote": "Himanshu did an outstanding job helping us respond to our SOC 2 audit follow-up questions. … Himanshu is a skilled and dependable engineer who takes ownership of his work. … Excellent communication, strong technical expertise, and great value. I would absolutely hire him again!",
+      "name": "David W.",
+      "designation": "United States · via Fiverr",
       "avatar": "",
       "enabled": true
     },
     {
       "id": "3",
-      "quote": "He understood and executed our vision with precision and creativity. Always up to hire him again",
-      "name": "Corey Anderson",
-      "designation": "",
+      "quote": "The work was done very professionally. All of my comments, requests, and suggested changes were carefully addressed and implemented exactly as I wanted. I’m extremely happy with the final result and more than pleased with our collaboration. I would be very happy to continue working with you in the future.",
+      "name": "Creator Commerce Platform (MVP)",
+      "designation": "Upwork client · 2026",
       "avatar": "",
       "enabled": true
     },
     {
       "id": "4",
-      "quote": "We placed our complete trust in Himanshu's hands, which more than paid off as our expectations were exceeded. We are super happy with the result.",
-      "name": "Sonja Dettmann",
-      "designation": "",
+      "quote": "Himanshu is AMAZING! I appreciate being able to tell him our vision, he takes it, digests it, does a bit of review, comes back to let me know if there are potential issues to be mindful BEFORE executing, and delivers timely delivery.",
+      "name": "Full Stack Developer, Ongoing Project",
+      "designation": "Upwork client · 2026",
       "avatar": "",
       "enabled": true
     },
     {
       "id": "5",
-      "quote": "With his high level of professionalism and intuitive sense of digital design, Himanshu has created an incredibly customized website branding for my business that is simply mind blowing.",
-      "name": "Steve Smith",
-      "designation": "",
+      "quote": "Himanshu is an exceptional full-stack developer with deep expertise in Microsoft Azure and enterprise-grade architecture. … He communicates clearly, works methodically, and genuinely cares about getting things right not just “done.” I will absolutely work with him again and highly recommend him to anyone building serious infrastructure on Microsoft Azure.",
+      "name": "Azure CI/CD & API Management",
+      "designation": "Upwork client · 2026",
+      "avatar": "",
+      "enabled": true
+    },
+    {
+      "id": "6",
+      "quote": "I had an excellent experience working with Himanshu on a large and technically demanding Azure infrastructure, cloud security, and SOC 2 readiness project for our production software platform. … I would be very comfortable working with Himanshu again on Azure infrastructure, cloud security, DevOps, compliance readiness, or other technically complex projects. Highly recommended.",
+      "name": "SOC 2 Technical Readiness",
+      "designation": "Upwork client · 2026",
+      "avatar": "",
+      "enabled": true
+    },
+    {
+      "id": "7",
+      "quote": "I recommend him to everyone. He is a flawless, understanding, and most importantly solution-oriented leader who does his job properly. I will make a contract again.",
+      "name": "SaaS Platform Development",
+      "designation": "Upwork client · 2025",
+      "avatar": "",
+      "enabled": true
+    },
+    {
+      "id": "8",
+      "quote": "Himanshu is a capable developer who can build an app from the ground up. Based on his decisions, it was clear he could not only code but design. He was a strength to our team and I'm sorry to see him go.",
+      "name": "Web Developer, 40 hrs/week",
+      "designation": "Upwork client · 2022",
+      "avatar": "",
+      "enabled": true
+    },
+    {
+      "id": "9",
+      "quote": "Himanshu delivered a great development work project and we enjoyed working with him. His communication was top-notch, he met all deadlines … We enjoyed working with Himanshu and will likely have additional jobs for him in the future.",
+      "name": "MEAN Stack & MySQL Developer",
+      "designation": "Upwork client · 2023",
+      "avatar": "",
+      "enabled": true
+    },
+    {
+      "id": "10",
+      "quote": "Himanshu was a great fit for our product prototyping process. He worked quickly and effectively with the other team members. We were able to adhere to timeline and complete it on time with deliverables to stakeholders.",
+      "name": "Prototype Web App, Established Company",
+      "designation": "Upwork client · 2021",
       "avatar": "",
       "enabled": true
     }
@@ -380,9 +415,9 @@
       "id": "smartcontact-ai",
       "enabled": true,
       "name": "SmartContact AI",
-      "description": "AI-powered lead generation platform for service businesses. Automates lead qualification via Google Gemini 2.0 voice calls and SMS nurture campaigns, with real-time routing, buyer portals, and analytics.",
+      "description": "AI-powered lead generation platform for service businesses. Automates lead qualification with AI voice calls (OpenAI Realtime or Gemini Live) and SMS nurture campaigns, with real-time routing, buyer portals, and analytics.",
       "project_link": "",
-      "live_link": "https://smartcontact.software",
+      "live_link": "https://smartcontactai.software",
       "tags": ["ai", "gemini", "twilio", "nextjs", "saas", "lead-generation", "voice", "sms"],
       "date": "2025-01-01",
       "poster": {
@@ -395,7 +430,7 @@
         { "id": "2", "src": "", "alt": "" },
         { "id": "3", "src": "", "alt": "" }
       ],
-      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "Google Gemini 2.0", "Twilio", "Google Cloud Run", "WebSocket"]
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "OpenAI Realtime", "Gemini Live", "Twilio", "Google Cloud Run", "WebSocket"]
     },
     {
       "id": "braverhood",
@@ -669,6 +704,83 @@
         { "id": "3", "src": "", "alt": "" }
       ],
       "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Radix UI", "Recharts", "Zod", "WebSocket", "Hyperliquid API"]
+    },
+    {
+      "id": "jeemba",
+      "enabled": true,
+      "name": "Jeemba",
+      "description": "Creator-driven commerce marketplace with three role-based dashboards. Creators post short videos, tag products and earn affiliate commission; shoppers discover and buy through Stripe; admins run creators, orders, moderation and analytics.",
+      "project_link": "",
+      "live_link": "",
+      "tags": [
+        "marketplace",
+        "ecommerce",
+        "stripe",
+        "supabase",
+        "nextjs",
+        "video-commerce"
+      ],
+      "date": "2026-05-27",
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Stripe",
+        "Vercel"
+      ]
+    },
+    {
+      "id": "mvm-health",
+      "enabled": true,
+      "name": "MVM Health",
+      "description": "AI lead qualification and patient engagement for a multi-location US vein clinic. An AI sales agent answers leads from ads and web forms 24/7, qualifies them, routes them to the right location and keeps follow-up going by SMS and email.",
+      "project_link": "",
+      "live_link": "",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "healthcare",
+        "crm",
+        "automation",
+        "sms"
+      ],
+      "date": "2026-08-11",
+      "technologies": [
+        "AI Agents",
+        "CRM Automation",
+        "SMS & Email Automation",
+        "Google Ads & Facebook Lead Forms"
+      ]
+    },
+    {
+      "id": "metal-promo",
+      "enabled": true,
+      "name": "Metal Promo Order Portal",
+      "description": "Customer order and proof-review portal for Metal Promo (Precision Coins). Orders from the company's price-quote forms flow in from Zoho, and customers review proofs, send feedback and complete orders in one place.",
+      "project_link": "",
+      "live_link": "",
+      "tags": [
+        "nextjs",
+        "react",
+        "zoho",
+        "portal",
+        "dashboard"
+      ],
+      "date": "2025-08-27",
+      "technologies": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zoho CRM",
+        "Zoho Books",
+        "Zoho Creator",
+        "Zoho WorkDrive",
+        "Chart.js"
+      ]
     }
   ],
   "activeProjects": [
@@ -829,7 +941,7 @@
     {
       "name": "Angular Chat",
       "order": 19,
-      "enabled": true,
+      "enabled": false,
       "type": "json",
       "category": ["Web Development"]
     },
@@ -944,6 +1056,35 @@
       "enabled": true,
       "type": "json",
       "category": ["Full Stack Development", "Web Development"]
+    },
+    {
+      "name": "Jeemba",
+      "order": -20,
+      "enabled": true,
+      "type": "json",
+      "category": [
+        "Full Stack Development",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "MVM Health",
+      "order": -19,
+      "enabled": true,
+      "type": "json",
+      "category": [
+        "AI"
+      ]
+    },
+    {
+      "name": "Metal Promo Order Portal",
+      "order": -18,
+      "enabled": true,
+      "type": "json",
+      "category": [
+        "Web Development",
+        "Full Stack Development"
+      ]
     }
   ],
   "socials": {
@@ -953,16 +1094,20 @@
       "className": "fa-brands fa-github"
     },
     "linkedin": {
-      "url": "https://www.linkedin.com/in/himanshu077",
-      "label": "View Linked Profile",
+      "url": "https://www.linkedin.com/in/himanshu077/",
+      "label": "View LinkedIn Profile",
       "className": "fa-brands fa-linkedin"
     },
     "upwork": {
-      "url": "https://www.upwork.com/fl/himanshu077",
-      "label": "View UpWork Profile",
+      "url": "https://www.upwork.com/freelancers/himanshu077",
+      "label": "View Upwork Profile",
       "className": "fa-brands fa-upwork"
+    },
+    "fiverr": {
+      "url": "https://www.fiverr.com/himanshu064",
+      "label": "View Fiverr Profile",
+      "className": "fa-brands fa-fiverr"
     }
-   
   },
   "services": {
     "webApplicationDevelopment": {

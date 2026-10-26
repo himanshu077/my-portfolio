@@ -19,10 +19,9 @@ const Imprint = () => {
                         <div>
                             <Heading>Details</Heading>
                             <Paragraph>
-                                <span className="text-neutrals-100">LOREM ISPUM OÜ</span><br />
-                                Lõrem 2a<br />
-                                LOrem Ispum, India<br /><br />
-                                CEO: Lorem Ispum
+                                <span className="text-neutrals-100">{siteConfig.name}</span><br />
+                                {siteConfig.slogan}<br />
+                                {siteConfig.location}
                             </Paragraph>
                         </div>
                         <div>

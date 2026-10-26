@@ -13,7 +13,7 @@ const About = () => {
   const [markdown, setMarkdown] = useState(null);
 
   useEffect(() => {
-    fetchMarkDownFile(3)  // 3 is the ID for about.md in MarkdownFilesMap
+    fetchMarkDownFile("about")
       .then((md) => {
         setMarkdown(md);
       });

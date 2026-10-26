@@ -22,11 +22,7 @@ const PortfolioProvider = ({ children }) => {
 
   const fetchAllRepos = useCallback(async () => {
     const apiUrl = `https://api.github.com/users/${appEnvs.REACT_APP_GITHUB_USERNAME}/repos?per_page=${appConfig.github.perPage}&page=${appConfig.github.initialPage}`;
-    fetch(apiUrl, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_API_KEY}`,
-      },
-    })
+    fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -43,11 +39,7 @@ const PortfolioProvider = ({ children }) => {
 
   const fetchSingleRepo = useCallback(async (repoName) => {
     const apiUrl = `https://api.github.com/repos/${appEnvs.REACT_APP_GITHUB_USERNAME}/${repoName}`;
-    fetch(apiUrl, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_API_KEY}`,
-      },
-    })
+    fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -65,11 +57,7 @@ const PortfolioProvider = ({ children }) => {
 
   const fetchRepoLogo = useCallback(async (repoName) => {
     const apiUrl = `https://api.github.com/repos/${repoName}/contents/logo.png`;
-    fetch(apiUrl, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_API_KEY}`,
-      },
-    })
+    fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

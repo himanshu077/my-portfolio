@@ -1,12 +1,13 @@
 const siteConfig = {
-    name: 'Net Web',
-    slogan: 'Web Development and Design Studio from the Future',
+    name: 'Himanshu Kumar',
+    slogan: 'Full Stack & AI Developer | OpenAI, Claude, RAG | React, Next.js, Node.js',
     description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas condimentum massa, id finibus quam porta nec. Cras et egestas leo. Suspendisse consectetur libero sed faucibus tincidunt. Ut cursus neque nec ligula ornare finibus. Nulla tempus diam eu iaculis condimentum. Vestibulum ultrices neque quis tempor efficitur.",
+        'Full Stack & AI Developer with 12+ years of experience building web, mobile and AI applications for clients in the US, UK, Europe, Australia and Canada.',
+    location: 'Ambala, Haryana, India',
     backgroundColor: '#060918',
     themeColor: '#6919FF',
     email: 'himanshukumar077@gmail.com',
-    url: 'https://google.com',
+    url: 'https://himanshu077.vercel.app',
     links: {
         github: 'https://github.com/himanshu077/',
     },

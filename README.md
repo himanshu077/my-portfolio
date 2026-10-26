@@ -38,7 +38,6 @@ Create a `.env` file in the root directory and add the following environment var
 
 ```
 REACT_APP_GITHUB_USERNAME=your_github_username
-REACT_APP_GITHUB_API_KEY=your_github_api_key
 ```
 
 ### Run the Project
@@ -51,7 +50,7 @@ The project will be available at `http://localhost:3000`.
 
 ## Live URL
 
-Check out the live version of the project at: [Live URL](https://portfolio-ten-gamma-30.vercel.app/)
+Check out the live version of the project at: [Live URL](https://himanshu077.vercel.app/)
 
 ## Contributing
 

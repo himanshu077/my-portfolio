@@ -28,8 +28,13 @@ function ProjectFilters({
       as="div"
       value={[selectedFilter]}
       onChange={(newSelectedFilters) => {
+        // `multiple` mode: re-clicking the current filter deselects it and
+        // yields [], so fall back to the current one instead of nothing.
+        const next =
+          newSelectedFilters.find((filter) => filter !== selectedFilter) ??
+          selectedFilter;
         setPage(1);
-        setSelectedFilter(newSelectedFilters.reverse()[0]);
+        setSelectedFilter(next);
         setIsOpen(false);
       }}
       multiple
